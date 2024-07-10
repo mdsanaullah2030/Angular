@@ -10,6 +10,9 @@ import { error } from 'console';
   styleUrl: './location.component.css'
 })
 export class LocationComponent implements OnInit {
+updateLocation(arg0: any) {
+throw new Error('Method not implemented.');
+}
   locations: any;
 
   constructor(

@@ -8,13 +8,15 @@ import { LocationComponent } from './location/location.component';
 import { CretelocationComponent } from './cretelocation/cretelocation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { UpdatelocationComponent } from './updatelocation/updatelocation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NusraatComponent,
     LocationComponent,
-    CretelocationComponent
+    CretelocationComponent,
+    UpdatelocationComponent
   ],
   imports: [
     BrowserModule,

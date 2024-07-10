@@ -29,6 +29,14 @@ return this.httpClint.get(this.baseUrl);
     return this.httpClint.delete(this.baseUrl+"/"+id);
   }
 
+  updateLocation(id:string,location:Location):Observable<any>{
+return this.httpClint.put(this.baseUrl+"/"+id,location);
 
+  }
+  getById(id:string):Observable<any>{
+
+return this.httpClint.get(this.baseUrl+"/"+id)
+
+  }
 
 }

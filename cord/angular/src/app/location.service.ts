@@ -15,15 +15,18 @@ baseUrl:string="http://localhost:3000/locations";
 
   getAllLocation():Observable<any>{
 
-return this.httpClint.get<any>(this.baseUrl);
+return this.httpClint.get(this.baseUrl);
 
   }
   
   cretelocation(location:Location):Observable<any>{
-    return this.httpClint.post(this.baseUrl,Location)
+    return this.httpClint.post(this.baseUrl,location)
 
 
 
+  }
+  deleteLocation(id:string):Observable<any>{
+    return this.httpClint.delete(this.baseUrl+"/"+id);
   }
 
 

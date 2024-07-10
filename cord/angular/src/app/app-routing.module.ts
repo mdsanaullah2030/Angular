@@ -9,7 +9,7 @@ const routes: Routes = [
   {path:'nusrat',component:NusraatComponent},
   {path:'location',component:LocationComponent},
   {path:'cretelocation',component:CretelocationComponent},
-  {path:'updateLocation',component:UpdatelocationComponent}
+  {path: 'updatelocation/:id', component:UpdatelocationComponent},
 ];
 
 @NgModule({

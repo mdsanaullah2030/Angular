@@ -6,8 +6,8 @@ export class Location{
     state:string |undefined;
     photo:string |undefined;
     availableUnits:number |undefined;
-    wifi:number |undefined;
-    laundry:number |undefined;
+    wifi:boolean |undefined;
+    laundry:boolean |undefined;
 
 
 

@@ -5,19 +5,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NusraatComponent } from './nusraat/nusraat.component';
 import { LocationComponent } from './location/location.component';
+import { CretelocationComponent } from './cretelocation/cretelocation.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     NusraatComponent,
-    LocationComponent
+    LocationComponent,
+    CretelocationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [
-    provideClientHydration()
+    provideHttpClient(
+      withFetch()
+    )
+  
   ],
   bootstrap: [AppComponent]
 })

@@ -26,7 +26,7 @@ import { UpdatelocationComponent } from './updatelocation/updatelocation.compone
 
   ],
   providers: [
-    provideClientHydration(),
+    
     provideHttpClient(
       withFetch()
     )

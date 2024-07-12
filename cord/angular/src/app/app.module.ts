@@ -9,6 +9,10 @@ import { CretelocationComponent } from './cretelocation/cretelocation.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { UpdatelocationComponent } from './updatelocation/updatelocation.component';
+import { CreatestudentComponent } from './student/createstudent/createstudent.component';
+import { StudentComponent } from './student/student.component';
+import { ViewstudentComponent } from './student/viewstudent/viewstudent.component';
+import { UpdateComponent } from './student/update/update.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { UpdatelocationComponent } from './updatelocation/updatelocation.compone
     NusraatComponent,
     LocationComponent,
     CretelocationComponent,
-    UpdatelocationComponent
+    UpdatelocationComponent,
+    CreatestudentComponent,
+    StudentComponent,
+    ViewstudentComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

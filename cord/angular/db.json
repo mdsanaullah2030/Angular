@@ -60,5 +60,23 @@
       "wifi": true,
       "laundry": true
     }
+  ],
+  "student":[
+{
+"id":1,
+"name":"sanaullah",
+"email":"sanaullah@gmail.com",
+"cellNo":"1234566",
+"location":{
+  "id":"0"
+}
+
+
+
+
+
+}
+    
+
   ]
 }

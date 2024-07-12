@@ -7,7 +7,7 @@ import { CreatelocationComponent } from './createlocation/createlocation.compone
 const routes: Routes = [
   {path:'sanaullah',component:SanaullahComponent},
   {path:'location',component:LocationComponent},
-  {path:'createlocation',component:CreatelocationComponent},
+  {path:'createlocation',component:CreatelocationComponent}
 ];
 
 @NgModule({

@@ -5,7 +5,7 @@ export class Location{
     city:string | undefined;
     state:string | undefined;
     photo:string | undefined;
-    availableUnits:number |	undefined;
-    wifi:number |	undefined;
-    laundry	:number |	undefined;
+    availableUnits:number |undefined;
+    wifi:number |undefined;
+    laundry	:number |undefined;
 }

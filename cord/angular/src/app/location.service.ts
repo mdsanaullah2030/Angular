@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { Location } from './location/location.model';
 
 @Injectable({
@@ -18,6 +18,26 @@ baseUrl:string="http://localhost:3000/locations";
 return this.httpClint.get(this.baseUrl);
 
   }
+
+//Student//
+getLocationForStudent():Observable<Location[]>{
+  return this.httpClint.get<Location[]>(this.baseUrl)
+  .pipe(
+    catchError(this.handleError)
+  )
+
+
+}
+
+//Successfuly hole amra  data pab//
+
+//na hole error asbe//
+ private handleError(error:any){
+console.error('an error occurred:',error);
+return throwError(()=> new error('test'));
+
+ }
+
   
   cretelocation(location:Location):Observable<any>{
     return this.httpClint.post(this.baseUrl,location)

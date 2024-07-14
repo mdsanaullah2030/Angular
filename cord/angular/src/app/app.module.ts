@@ -3,7 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NusraatComponent } from './nusraat/nusraat.component';
+
 import { LocationComponent } from './location/location.component';
 import { CretelocationComponent } from './cretelocation/cretelocation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -17,7 +17,7 @@ import { UpdateComponent } from './student/update/update.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NusraatComponent,
+  
     LocationComponent,
     CretelocationComponent,
     UpdatelocationComponent,

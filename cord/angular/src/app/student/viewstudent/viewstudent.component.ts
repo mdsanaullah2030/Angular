@@ -14,7 +14,7 @@ locations:any;
 
 constructor(
 
-  private service:StudentService,
+  private studentService:StudentService,
   private locatnService:LocationService,
 
 
@@ -25,18 +25,11 @@ constructor(
 
   ngOnInit(): void {
     
-this.locatnService.getAllLocation().subscribe(locations=>{
-  this.locations=locations;
-
-});
+this.locations=this.locatnService.getLocationForStudent();
+this.students=this.studentService.viewAllStudent
 
 
   }
-  loadStudents(){
 
-    this.service.viewAllStudent().subscribe(
-      
-    )
-  }
 
 }

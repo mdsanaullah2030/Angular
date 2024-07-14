@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../../student.service';
 import { LocationService } from '../../location.service';
+import { studentmodel } from '../student.model';
+import { Router } from '@angular/router';
+import { fork } from 'child_process';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-viewstudent',
@@ -9,13 +13,14 @@ import { LocationService } from '../../location.service';
 })
 export class ViewstudentComponent implements OnInit {
 
-students: any;
-locations:any;
+students:studentmodel []=[];
+locations:Location[]=[];
 
 constructor(
 
   private studentService:StudentService,
   private locatnService:LocationService,
+  private router:Router
 
 
 )
@@ -25,11 +30,22 @@ constructor(
 
   ngOnInit(): void {
     
-this.locations=this.locatnService.getLocationForStudent();
-this.students=this.studentService.viewAllStudent
+this.loadData();
 
 
   }
-
+loadData():void{
+  forkJoin({
+    locations: this.locatnService.getLocationForStudent(),
+    students: this.studentService.viewAllStudent()
+  }).subscribe({
+    next: ({ locations, students }) => {
+      this.locations = locations;
+      this.students = students;
+    },
+    error: err => {
+      console.log(err);
+    }
+  });
 
 }

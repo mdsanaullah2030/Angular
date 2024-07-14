@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { studentmodel } from './student/student.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,9 @@ export class StudentService {
   constructor(
     private http:HttpClient
   ) { }
-  viewAllStudent():Observable<any>{
+  viewAllStudent(student:studentmodel):Observable<studentmodel>{
     
-    return this.http.get(this.baseUrl)
+    return this.http.post<studentmodel>(this.baseUrl,student)
 
   }
 }

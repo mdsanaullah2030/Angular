@@ -80,18 +80,27 @@ export class UpdateComponent implements OnInit {
       }
     });
   }
-  updateStudent():void{
-    const updateStudent:studentmodel={
+  updateStudent(): void {
+
+    const updatedStudent: studentmodel = {
       ...this.student,
       ...this.studentForm.value
     };
-    this.studentService.updateStudent(updateStudent).subscribe({
-      
-    })
+    this.studentService.updateStudent(updatedStudent).subscribe({
+      next: res => {
+        console.log('Student updated successfully:', res);
+        this.router.navigate(['student']); // Navigate to the students list after update
+      },
+      error: err => {
+        console.log('Error updating student:', err);
+      }
+    });
 
   }
 
-}
+  }
+
+
 
 
 

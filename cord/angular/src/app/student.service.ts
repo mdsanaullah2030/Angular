@@ -7,6 +7,9 @@ import { studentmodel } from './student/student.model';
   providedIn: 'root'
 })
 export class StudentService {
+  updateStudent(updateStudent: studentmodel) {
+    throw new Error('Method not implemented.');
+  }
 
   baseUrl:string="http://localhost:3000/student/";
 

@@ -8,13 +8,15 @@ import { LocationComponent } from './location/location.component';
 import { CreatelocationComponent } from './createlocation/createlocation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { CreateComponent } from './student/create/create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SanaullahComponent,
     LocationComponent,
-    CreatelocationComponent
+    CreatelocationComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,

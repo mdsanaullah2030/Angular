@@ -108,6 +108,15 @@
       "availableUnits": "4",
       "wifi": true,
       "laundry": false
+    },
+    {
+      "id": "72eb",
+      "name": "ss",
+      "city": "sfsd",
+      "state": "sdf",
+      "availableUnits": "3",
+      "wifi": true,
+      "laundry": true
     }
   ]
 }

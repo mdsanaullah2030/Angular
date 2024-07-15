@@ -13,9 +13,13 @@ export class StudentService {
   constructor(
     private http:HttpClient
   ) { }
-  viewAllStudent(student:studentmodel):Observable<studentmodel>{
-    
-    return this.http.post<studentmodel>(this.baseUrl,student)
+  viewAllStudent():Observable<any>{
 
+    return this.http.get(this.baseUrl);
   }
-}
+  createStudent(students:StudentService):Observable<studentmodel>{
+
+    return this.http.post<studentmodel>(this.baseUrl,students);
+  }
+  }
+

@@ -14,6 +14,7 @@ const routes: Routes = [
   {path: 'updatelocation/:id', component:UpdatelocationComponent},
   {path:'student',component:ViewstudentComponent},
   {path:'createstudent',component:CreatestudentComponent},
+  {path:'UpdatestudentComponent',component:CreatestudentComponent},
 ];
 
 @NgModule({

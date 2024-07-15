@@ -7,8 +7,8 @@ import { studentmodel } from './student/student.model';
   providedIn: 'root'
 })
 export class StudentService {
-  updateStudent(updateStudent: studentmodel) {
-    throw new Error('Method not implemented.');
+  updateStudent(updateStudent: studentmodel): Observable<studentmodel> {
+    throw new Error('Method not implemented.'); //eta shesh koiren. return type dewa chilo na taai
   }
 
   baseUrl:string="http://localhost:3000/student/";

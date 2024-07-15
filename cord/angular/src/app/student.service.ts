@@ -17,9 +17,17 @@ export class StudentService {
 
     return this.http.get(this.baseUrl);
   }
-  createStudent(students:StudentService):Observable<studentmodel>{
+  createStudent(students:studentmodel):Observable<studentmodel>{
 
     return this.http.post<studentmodel>(this.baseUrl,students);
+
+  }
+
+  deleteStudent(id:string):Observable<any>{
+    return this.http.delete(this.baseUrl+id);
+
+
+
   }
   }
 

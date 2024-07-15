@@ -5,6 +5,7 @@ import { studentmodel } from '../student.model';
 import { StudentService } from '../../student.service';
 import { LocationService } from '../../location.service';
 import { Router } from '@angular/router';
+import { Location } from '../../location/location.model';
 
 @Component({
   selector: 'app-createstudent',

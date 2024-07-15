@@ -5,6 +5,7 @@ import { LocationComponent } from './location/location.component';
 import { CretelocationComponent } from './cretelocation/cretelocation.component';
 import { UpdatelocationComponent } from './updatelocation/updatelocation.component';
 import { ViewstudentComponent } from './student/viewstudent/viewstudent.component';
+import { CreatestudentComponent } from './student/createstudent/createstudent.component';
 
 const routes: Routes = [
  
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'cretelocation',component:CretelocationComponent},
   {path: 'updatelocation/:id', component:UpdatelocationComponent},
   {path:'student',component:ViewstudentComponent},
+  {path:'createstudent',component:CreatestudentComponent},
 ];
 
 @NgModule({

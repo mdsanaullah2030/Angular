@@ -31,4 +31,21 @@ export class ViewstudentComponent implements OnInit {
 
     this.students = this.Studentservice.viewAllStudent();
   }
+  deleteStudents(id:string){
+
+    this.Studentservice.deleteStudent(id)
+    .subscribe({
+      next:rs=>{
+        this.students=this.Studentservice.viewAllStudent();
+        this.router.navigate(['/students']);
+
+
+      },
+      error:error=>{
+        console.log(error);
+      }
+
+
+    })
+  }
 }

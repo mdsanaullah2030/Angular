@@ -85,8 +85,8 @@ error:err=>{
 createStudent(){
 
 this.student.name=this.studentForm.value.name;
-this.student.email=this.studentForm.value.name;
-this.student.cellNo=this.studentForm.value.name;
+this.student.email=this.studentForm.value.email;
+this.student.cellNo=this.studentForm.value.cellNo;
 this.student.location=this.studentForm.value.location;
 
 this.studentService.createStudent(this.student)

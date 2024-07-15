@@ -11,6 +11,7 @@
             <th>Cell</th>
             <th>Location</th>
             <th>Action</th>
+            <th>Action</th>
         </tr>
 
         <tr *ngFor="let st of students |async">
@@ -21,6 +22,8 @@
             <td>{{st.location.name}}</td>
             <td>
                 <button class="btn btn-warning">Edit</button>
+            </td>
+            <td>  
                 <button class="btn btn-danger" (click)="deleteStudents(st.id)">Delete</button>
             </td>
         </tr>

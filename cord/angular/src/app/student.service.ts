@@ -23,11 +23,23 @@ export class StudentService {
 
   }
 
-  deleteStudent(id:string):Observable<any>{
-    return this.http.delete(this.baseUrl+id);
+  deleteStudent(studentId:string):Observable<void>{
+    return this.http.delete<void>(this.baseUrl+studentId);
+    //  return this.http.delete<void>(`${this.baseUrl}${studentId}`);//
 
 
 
   }
-  }
+getStudentById(studentId:string):Observable<studentmodel>{
+
+  return this.http.get<studentmodel>(this.baseUrl+studentId);
+  //return this.http.get<StudentModel>(`${this.baseUrl}${studentId}`);//
+}
+
+ 
+
+}
+
+
+  
 

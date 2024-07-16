@@ -39,7 +39,7 @@ import { RegistrationComponent } from './registration/registration.component';
 
   ],
   providers: [
-    
+    provideClientHydration(),
     provideHttpClient(
       withFetch()
     )

@@ -48,4 +48,8 @@ export class ViewstudentComponent implements OnInit {
 
     })
   }
+  editStudent(student: studentmodel): void {
+    // Navigate to the edit student component with the student's ID
+    this.router.navigate(['/updatestudent', student.id]);
+  }
 }

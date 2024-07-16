@@ -66,50 +66,50 @@ export class CreatestudentComponent implements OnInit {
 
 
   } loadLocation() {
-  
-this.locationService.getLocationForStudent()
-.subscribe({
-  next:res=>{
-    this.locations=res;
-  },
-error:err=>{
-  console.log(err);
 
-}
+    this.locationService.getLocationForStudent()
+      .subscribe({
+        next: res => {
+          this.locations = res;
+        },
+        error: err => {
+          console.log(err);
 
-
-});
+        }
 
 
-}
-createStudent(){
-
-this.student.name=this.studentForm.value.name;
-this.student.email=this.studentForm.value.email;
-this.student.cellNo=this.studentForm.value.cellNo;
-this.student.location=this.studentForm.value.location;
-
-this.studentService.createStudent(this.student)
-.subscribe({
-
-  next:res=>{
-this.loadLocation();
-this.studentForm.reset();
-this.router.navigate(['student']);
-
-  },
-  error:err=>{
-
-    console.log(err);
-  }
-});
-
-
-}
-
+      });
 
 
   }
+  createStudent() {
+
+    this.student.name = this.studentForm.value.name;
+    this.student.email = this.studentForm.value.email;
+    this.student.cellNo = this.studentForm.value.cellNo;
+    this.student.location = this.studentForm.value.location;
+
+    this.studentService.createStudent(this.student)
+      .subscribe({
+
+        next: res => {
+          this.loadLocation();
+          this.studentForm.reset();
+          this.router.navigate(['student']);
+
+        },
+        error: err => {
+
+          console.log(err);
+        }
+      });
+
+
+  }
+
+
+
+}
 
 
 

@@ -13,6 +13,8 @@ import { CreatestudentComponent } from './student/createstudent/createstudent.co
 import { StudentComponent } from './student/student.component';
 import { ViewstudentComponent } from './student/viewstudent/viewstudent.component';
 import { UpdateComponent } from './student/update/update.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,16 @@ import { UpdateComponent } from './student/update/update.component';
     CreatestudentComponent,
     StudentComponent,
     ViewstudentComponent,
-    UpdateComponent
+    UpdateComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
 
   ],
   providers: [

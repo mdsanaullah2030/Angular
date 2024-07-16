@@ -6,6 +6,9 @@ import { CretelocationComponent } from './cretelocation/cretelocation.component'
 import { UpdatelocationComponent } from './updatelocation/updatelocation.component';
 import { ViewstudentComponent } from './student/viewstudent/viewstudent.component';
 import { CreatestudentComponent } from './student/createstudent/createstudent.component';
+import { UpdateComponent } from './student/update/update.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
  
@@ -14,7 +17,11 @@ const routes: Routes = [
   {path: 'updatelocation/:id', component:UpdatelocationComponent},
   {path:'student',component:ViewstudentComponent},
   {path:'createstudent',component:CreatestudentComponent},
-  {path:'UpdatestudentComponent',component:CreatestudentComponent},
+  {path:'updatestudent',component:UpdateComponent},
+  {path:'reg',component:RegistrationComponent},
+  {path:'log',component:LoginComponent}
+
+
 ];
 
 @NgModule({

@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'updatelocation/:id', component:UpdatelocationComponent},
   {path:'student',component:ViewstudentComponent},
   {path:'createstudent',component:CreatestudentComponent},
-  {path:'updatestudent',component:UpdateComponent},
+  {path:'updatestudent/:id',component:UpdateComponent},
   {path:'reg',component:RegistrationComponent},
   {path:'log',component:LoginComponent}
 

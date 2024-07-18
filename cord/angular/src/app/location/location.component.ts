@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationService } from '../location.service';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { error } from 'console';
 
@@ -17,9 +17,6 @@ export class LocationComponent implements OnInit {
     private locationService: LocationService,
     private router: Router,
     private httpClient: HttpClient
-
-
-
   ) {
   }
 

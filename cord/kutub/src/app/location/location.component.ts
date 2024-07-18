@@ -22,5 +22,28 @@ export class LocationComponent implements OnInit{
    
     this.locations=this.locationService.getAllLocation();
   }
+  deleteLocation(id: string) {
+    //location service hote delete mathod call dite (ID)//
+    this.locationService.deleteLocation(id)
+      .subscribe({
+        next: res => {
+          this.locations = this.locationService.getAllLocation();
+          //navigate error asle Router angular hote nite hobe//
+          this.router.navigate(['location']);
+          //success hole navigate hoye location jabe//
+        },
+        error: error => {
+          console.log(error);
+
+        }
+
+      });
+
+  }
+  //Location updatelocation ke call dilam//
+  
+  updateLocation(id:string){
+    this.router.navigate(['updatelocation',id]);
+  }
 
 }

@@ -42,7 +42,8 @@ import { RegistrationComponent } from './registration/registration.component';
     
     provideHttpClient(
       withFetch()
-    )
+    ),
+    provideClientHydration()
   
   ],
   bootstrap: [AppComponent]

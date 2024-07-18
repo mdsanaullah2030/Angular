@@ -3,20 +3,29 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SanaullahComponent } from './sanaullah/sanaullah.component';
+
 import { LocationComponent } from './location/location.component';
 import { CreatelocationComponent } from './createlocation/createlocation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
-import { CreateComponent } from './student/create/create.component';
+import { UpdatelocationComponent } from './updatelocation/updatelocation.component';
+import { UpdatestudentComponent } from './student/updatestudent/updatestudent.component';
+import { StudentComponent } from './student/student.component';
+import { CreatestudentComponent } from './student/createstudent/createstudent.component';
+import { CommonModule } from '@angular/common';
+import { ViewstudentComponent } from './student/viewstudent/viewstudent.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    SanaullahComponent,
     LocationComponent,
     CreatelocationComponent,
-    CreateComponent
+    UpdatelocationComponent,
+    UpdatestudentComponent,
+    StudentComponent,
+    CreatestudentComponent,
+    ViewstudentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,37 +1,39 @@
-<p>location works!</p>
 <div class="container">
     <table class="table table-striped">
 
-        <tr>
-            
-            
-            <th>Name</th>
-            <th>City</th>
-            <th>State</th>
-            <th>photo</th>
-            <th>Unit</th>
-            <th>wifi</th>
-            <th>laundry</th>
-            <th>Action</th>
-            <th>Action</th>
-        </tr>
-<tr *ngFor="let location of locations |async">
-    <td>{{location.name}}</td>
-    <td>{{location.city}}</td>
-    <td>{{location.state}}</td>
-    <td>{{location.photo}}</td>
-    <td>{{location.availableUnits}}</td>
-    <td>{{location.wifi}}</td>
-    <td>{{location.laundry}}</td>
-    <td><button class="btn btn-warning">Edit</button>
-    </td>
-    <td>
-        <button class="btn btn-danger">Delete</button>
-    </td>
-    
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Photo</th>
+                <th>Unit</th>
+                <th>wifi</th>
+                <th>laundry</th>
 
+                <th>Action</th>
+            </tr>
+        </thead>
 
-</tr>
+        <tbody>
+            <tr *ngFor="let location of locations |async">
+                <td>{{location.name}}</td>
+                <td>{{location.city}}</td>
+                <td>{{location.state}}</td>
+                <td>{{location.availableUnits}}</td>
+                <td><img [src]="location.photo" alt="{{location.Photo}}" style="width: 50px; height: auto;"></td>
+                <td>{{location.wifi}}</td>
+                <td>{{location.laundry}}</td>
+                <td>
+                    <button class="btn btn-warning m-1 p-1" (click)="updateLocation(location.id)" >Edit</button>
+                    <button class="btn btn-danger m-1 p-1" (click)="deleteLocation(location.id)" >Delete</button>
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
 
 
     </table>

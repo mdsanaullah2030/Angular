@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SanaullahComponent } from './sanaullah.component';
+import { UpdatelocationComponent } from './updatelocation.component';
 
-describe('SanaullahComponent', () => {
-  let component: SanaullahComponent;
-  let fixture: ComponentFixture<SanaullahComponent>;
+describe('UpdatelocationComponent', () => {
+  let component: UpdatelocationComponent;
+  let fixture: ComponentFixture<UpdatelocationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SanaullahComponent]
+      declarations: [UpdatelocationComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SanaullahComponent);
+    fixture = TestBed.createComponent(UpdatelocationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

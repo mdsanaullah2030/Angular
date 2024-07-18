@@ -30,10 +30,9 @@ password:['',Validators.required]
 
   }
   onSubmit(): void {
-    // if form name and email filup //
+   
     if (this.regForm.valid) {
-      //form value asar por joma rakhbo user kache//
-      //value gula use authService  registration//
+     
       const user: UserModel = this.regForm.value;
       this.authService.registration(user).subscribe({
         next: (res) => {

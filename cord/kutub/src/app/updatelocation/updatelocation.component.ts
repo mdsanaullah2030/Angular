@@ -57,6 +57,7 @@ export class UpdatelocationComponent implements OnInit {
       .subscribe({
         next: res => {
           //this.location=new Location();
+          //upre veriabol router na diklar korle navigate sagust korbe na//
           this.router.navigate(['location']);
 
         },

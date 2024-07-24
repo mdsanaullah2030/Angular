@@ -1,0 +1,50 @@
+<p>viewbooking works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Add Form</title>
+
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">Booking </h2>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>seating</th>
+                    <th>child</th>
+                    <th>Name</th>
+                    <th>Email</th>
+
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let st of bookings | async">
+                    <td>{{ st.id }}</td>
+                    <td>{{ st.seating }}</td>
+                    <td>{{ st.child }}</td>
+                    <td>{{ st.students.name }}</td>
+                    <td>{{ st.students. email }}</td>
+
+                    <td>
+                        <button class="btn btn-warning btn-m- p-1" > Edit </button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger btn- m-2 p-1" >Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

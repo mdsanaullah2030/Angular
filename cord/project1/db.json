@@ -1,0 +1,12 @@
+{
+    "booking": [
+        {
+            "id": "0",
+            "roomNumber": "101",
+            "guestName": "sanaullah",
+            "checkInDate": "2024-07-24",
+            "checkOutDate": "2024-07-27",
+            "totalPrice": 2000
+        }
+    ]
+}

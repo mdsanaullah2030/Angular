@@ -14,7 +14,7 @@ const routes: Routes = [
  
   {path:'location',component:LocationComponent},
   {path:'cretelocation',component:CretelocationComponent},
-  {path: 'updatelocation/:id', component:UpdatelocationComponent},
+  {path:'updatelocation/:id',component:UpdatelocationComponent},
   {path:'student',component:ViewstudentComponent},
   {path:'createstudent',component:CreatestudentComponent},
   {path:'updatestudent/:id',component:UpdateComponent},

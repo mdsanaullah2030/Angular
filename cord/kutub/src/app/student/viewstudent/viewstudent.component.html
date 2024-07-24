@@ -1,34 +1,48 @@
-<div class="container">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>cellNo</th>
-                <th>Location</th>
-                <th>Action</th>
+<!DOCTYPE html>
+<html lang="en">
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let st of students | async">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Add Form</title>
 
-                <td>{{st.id}}</td>
-                <td>{{st.name}}</td>
-                <td>{{st.email}}</td>
-                <td>{{st.cellNo}}</td>
-                <td>{{st.location.name}}</td>
+</head>
 
-                <td>
-                    <button class="btn btn-warning"(click)="deleteStudent(students.id)">Delete</button>
-                    <button class="btn btn-danger"(click)="editStudent(students)">Edit</button>
+<body>
 
-                </td>
+    <div class="container mt-5">
+        <h2 class="mb-4">Student </h2>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Cell No</th>
+                    <th>Location</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let st of students | async">
+                    <td>{{ st.id }}</td>
+                    <td>{{ st.name }}</td>
+                    <td>{{ st.email }}</td>
+                    <td>{{ st.cellNo }}</td>
+                    <td>{{ st.location.name }}</td>
 
-            </tr>
-        </tbody>
+                    <td>
+                        <button class="btn btn-warning btn-m- p-1" (click)="editStudent(st.id)"> Edit </button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger btn- m-2 p-1" (click)="deleteStudent(st.id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    </table>
+</body>
 
-</div>
+</html>

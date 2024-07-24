@@ -14,6 +14,9 @@ import { StudentComponent } from './student/student.component';
 import { CreatestudentComponent } from './student/createstudent/createstudent.component';
 import { CommonModule } from '@angular/common';
 import { ViewstudentComponent } from './student/viewstudent/viewstudent.component';
+import { RegistrationComponent } from './registration/registration.component';
+
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { ViewstudentComponent } from './student/viewstudent/viewstudent.componen
     UpdatestudentComponent,
     StudentComponent,
     CreatestudentComponent,
-    ViewstudentComponent
+    ViewstudentComponent,
+    RegistrationComponent,
+   
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +40,7 @@ import { ViewstudentComponent } from './student/viewstudent/viewstudent.componen
     ReactiveFormsModule
   ],
   providers: [
+    provideHttpClient(),
     provideHttpClient(
       withFetch()
     )

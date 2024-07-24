@@ -1,0 +1,51 @@
+<p>booking works!</p>
+
+
+
+
+
+
+<div class="container">
+    <table class="table table-striped">
+
+        <thead>
+            <tr>
+                <th>RoomNumber</th>
+                <th>GuestName</th>
+                <th>CheckInDate</th>
+                <th>CheckOutDate</th>
+                <th>TotalPrice</th>
+               
+
+                <th>Action</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let location of bookings |async">
+                <td>{{location.roomNumber}}</td>
+                <td>{{location.guestName}}</td>
+                <td>{{location.checkInDate}}</td>
+                <td>{{location.checkOutDate}}</td>
+              
+                <td>{{location.totalPrice}}</td>
+                
+                <td>
+                    <button class="btn btn-warning m-1 p-1"  >Edit</button>
+                    
+
+                </td>
+                <td>
+                    <button class="btn btn-danger m-1 p-1"  >Delete</button>
+                </td>
+
+            </tr>
+
+        </tbody>
+
+
+
+    </table>
+
+</div>

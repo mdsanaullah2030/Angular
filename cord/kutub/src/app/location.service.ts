@@ -53,6 +53,7 @@ export class LocationService {
 
 
   }
+  //private handleError return na shes korle upre retun Error asbe//
   private handleError(error: any) {
     console.error('An error occurred:', error);
     return throwError(() => new Error('test'));

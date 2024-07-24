@@ -33,11 +33,11 @@ export class ViewstudentComponent implements OnInit{
     this.students=this.ststudentService.viewAllStudent();
     
   }
-  deleteStudent(studentId:string):void{
-    this.ststudentService.deleteStudent(studentId).subscribe({
+  deleteStudent(id:string){
+    this.ststudentService.deleteStudent(id).subscribe({
       next:res=>{
         this.students=this.ststudentService.viewAllStudent();
-        this.router.navigate(['/student'])
+        this.router.navigate(['/student']);
 
       },
       error:error=>{

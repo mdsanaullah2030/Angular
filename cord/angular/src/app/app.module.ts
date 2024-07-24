@@ -39,11 +39,11 @@ import { RegistrationComponent } from './registration/registration.component';
 
   ],
   providers: [
-    provideClientHydration(),
+    // provideClientHydration(),
     provideHttpClient(
       withFetch()
     ),
-    provideClientHydration()
+    // provideClientHydration()
   
   ],
   bootstrap: [AppComponent]

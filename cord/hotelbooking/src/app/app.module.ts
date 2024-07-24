@@ -1,21 +1,51 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-import { SigInComponent } from './sig-in/sig-in.component';
+import { BookingComponent } from './booking/booking/booking.component';
+import { CreatebookingComponent } from './booking/createbooking/createbooking.component';
+import { UpdatebookingComponent } from './booking/updatebooking/updatebooking.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+// import { FulfilComponent } from './fulfil/fulfil/fulfil.component';
+import { ViewfulfilComponent } from './fulfil/viewfulfil/viewfulfil.component';
+import { UpdatefulfilComponent } from './fulfil/updatefulfil/updatefulfil.component';
+import { CreatefulfilComponent } from './fulfil/createfulfil/createfulfil.component';
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    SigInComponent
+    BookingComponent,
+    CreatebookingComponent,
+    UpdatebookingComponent,
+    // FulfilComponent,
+
+  
+    ViewfulfilComponent,
+    UpdatefulfilComponent,
+    CreatefulfilComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+   
   ],
   providers: [
-    provideClientHydration()
+    
+    provideHttpClient(
+      withFetch()
+      
+    )
+      
+   
   ],
   bootstrap: [AppComponent]
 })

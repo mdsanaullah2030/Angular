@@ -44,7 +44,7 @@ export class UpdateComponent implements OnInit {
         wifi: [undefined],
         laundry: [undefined]
       })
-
+ 
 
 
     });

@@ -25,18 +25,21 @@ export class StudentService {
   }
 
   
-  deleteStudent(studentId: string): Observable<void> {
-    return this.http.delete<void>(`${this.baseUrl}${studentId}`);
-    //return this.http.delete<void>(this.baseUrl+studentId);
+  deleteStudent(id: string): Observable<any> {
+    // return this.http.delete<void>(`${this.baseUrl}${studentId}`);
+    //Error ID Null hole +"/"++ID na dile//
+    return this.http.delete(this.baseUrl+"/"+id);
   }
   updateStudent(student:StudentModel):Observable<StudentModel>{
-    // /return this.http.delete<void>(this.baseUrl+studentId);//
-    return this.http.put<StudentModel>(`${this.baseUrl}${student.id}`,student);
-
+    console.log(student);
+    // return this.http.delete<void>(this.baseUrl+studentId);
+    // return this.http.put<StudentModel>(`${this.baseUrl}${student.id}`,student);
+    return this.http.put<StudentModel>(this.baseUrl + student.id, student);
   }
   getStudentById(studentId:string):Observable<StudentModel>{
-    return this.http.get<StudentModel>(`${this.baseUrl} ${studentId}`);
+    // return this.http.get<StudentModel>(`${this.baseUrl} ${studentId}`);
     //baseUrl+studentId  avabe likha jab//
+    return this.http.get<StudentModel>(this.baseUrl + studentId);
   }
 
 }

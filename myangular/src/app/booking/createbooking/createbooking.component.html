@@ -1,0 +1,34 @@
+
+<p>createbooking works!</p>
+
+<div class="container">
+    <h1 class="text-center">Student Add Form</h1>
+    <form [formGroup]="bookingForm" (ngSubmit)="createBoking()">
+        <div class="mb-3">
+            <label for="seating" class="form-label">seating</label>
+            <input id="seating" type="text" class="form-control" formControlName="seating" placeholder="Enter your seating">
+        </div>
+
+        <div class="mb-3">
+            <label for="child" class="form-label">child</label>
+            <input id="child" type="child" class="form-control" formControlName="child" placeholder="Enter your child">
+        </div>
+        
+    
+       
+        <div class="mb-3" formGroupName="location">
+            <div class="invalid-feedback">Please select a location.</div>
+            <label for="location" class="form-label">Location:</label>
+            <select id="location" formControlName="name" class="form-select" required>
+                <option value="" disabled selected>Select your location</option>
+                <option *ngFor="let loc of student" [ngValue]="loc.name">{{loc.name}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="cellNo" class="form-label">email</label>
+            <input id="email" type="email" class="form-control" formControlName="email" placeholder="Enter your  email">
+        </div>
+
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+</div>

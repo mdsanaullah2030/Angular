@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { StudentModel } from '../../model/student.model';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -11,7 +11,7 @@ import { StudentService } from '../student.service';
   templateUrl: './updatestudent.component.html',
   styleUrl: './updatestudent.component.css'
 })
-export class UpdatestudentComponent {
+export class UpdatestudentComponent implements OnInit{
 
   studentForm!: FormGroup;
   locations: Location[] = [];
@@ -102,7 +102,7 @@ const updateStudent:StudentModel={
 this.studentService.updateStudent(updateStudent).subscribe({
 next:res=>{
   console.log('Student updated successfully:', res);
-  this.router.navigate(['student']);
+  this.router.navigate(['viewstudent']);
 },
 error: err => {
   console.log('Error updating student:', err);

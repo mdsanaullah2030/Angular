@@ -38,6 +38,8 @@ export class AuthService {
           const user = users[0];
           if (user.password === credentials.password) {
             const token = btoa(`${user.email}:${user.password}`);
+            //user loging korle userProfile data chol jabe//
+            this.storeUserProfile(user);
             return { token, user } as AuthResponse;
           } else {
             throw new Error('Invalid password');
@@ -56,8 +58,21 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('token');
   }
+storeUserProfile(user:UserModel):void{
+  //localStorage  madhe JSON  akare save rakhbe/
+  localStorage.setItem('useProfile',JSON.stringify(user));
+
+}
+getUserProfileFormStorage():UserModel | null{
+  //localStorage hote niye parse kore text kore retount korlam//
+ const useprofile=localStorage.getItem('userProfile');
+ return useprofile ? JSON.parse(useprofile):null;
 
 
+}
+removeUserDatails(){
+  localStorage.clear();
+}
 
   storeToken(token: string): void {
     localStorage.setItem('token', token);

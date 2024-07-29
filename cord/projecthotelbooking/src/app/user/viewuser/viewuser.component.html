@@ -1,0 +1,31 @@
+<div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+            
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Phone Number</th>
+          
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let us of users |async">
+           
+          <td>{{ us.name }}</td>
+          <td>{{ us.email }}</td>
+          <td>{{ us.password }}</td>
+          <td>{{ us.phonenumber }}</td>
+          <td>
+           
+
+            <button class="btn btn-danger m-1 p-1" (click)="updateUser(us.id)">Edit</button>
+            <button class="btn btn-warning m-1 p-1 cl" (click)="deleteUser(us.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

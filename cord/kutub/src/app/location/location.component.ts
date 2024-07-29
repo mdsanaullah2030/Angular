@@ -40,7 +40,7 @@ export class LocationComponent implements OnInit{
       });
 
   }
-  //Location updatelocation ke call dilam//
+  //Location updatelocation ke call dilam path akoy name dite hobe//
   
   updateLocation(id:string){
     this.router.navigate(['updatelocation',id]);

@@ -33,7 +33,7 @@ export class LocationService {
     return this.httpClint.put(this.baseUrl + "/" + id, location);
 
   }
-
+  
   getById(id: string): Observable<any> {
     //basUrl+id Add kore Delete korbe//
 

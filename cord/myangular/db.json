@@ -119,6 +119,12 @@
       "name": "towhid",
       "email": "rofik1787@gmail.com",
       "password": "111111"
+    },
+    {
+      "id": "bd2d",
+      "name": "sanaullah",
+      "email": "sanaullah@gmail.com",
+      "password": "1234567890"
     }
   ],
   "locations": [

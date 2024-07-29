@@ -1,0 +1,18 @@
+{
+  "User": [
+    {
+      "id": "1",
+      "name": "sanaulla",
+      "email": "sanaulla@gmail.com",
+      "password": "4567",
+      "phonenumber": "01741779995"
+    },
+    {
+      "id": "53f4",
+      "name": "Rabbani",
+      "email": "sanallah@gmail.com",
+      "password": 123456,
+      "phonenumber": "afdfsg"
+    }
+  ]
+}

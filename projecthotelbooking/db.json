@@ -1,0 +1,57 @@
+{
+  "User": [
+    {
+      "id": "dd31",
+      "name": "sfsdfsf",
+      "email": "asfasdd@gmail.com",
+      "password": 12342,
+      "phonenumber": "24234",
+      "userid": "32423"
+    }
+  ],
+  "room": [
+    {
+      "id": "1",
+      "roomid": "number",
+      "roomnumber": "string",
+      "roomtype": "string",
+      "price": "number",
+      "status": "string",
+      "description": "string"
+    },
+    {
+      "id": "cae6",
+      "roomid": 111,
+      "roomnumber": 202,
+      "roomtype": "singel",
+      "price": 5000,
+      "status": "sd",
+      "description": "sdfsd"
+    }
+  ],
+  "booking": [
+    {
+      "id": "1",
+      "bookingid": 34,
+      "checkindate": "2024-07-28",
+      "checkoutdate": "2024-07-30",
+      "bookingdate": "2020-07-25",
+      "user": {
+        "userid": "13213",
+        "name": "sdsns",
+        "email": "adad@gmail.com",
+        "password": "34455",
+        "phonenumber": "57898900",
+        "room": {
+          "id": "4355",
+          "roomid": 4353,
+          "roomnumber": 42342,
+          "roomtype": "ac",
+          "price": 13123123,
+          "status": "reef",
+          "description": "adfasdfs"
+        }
+      }
+    }
+  ]
+}

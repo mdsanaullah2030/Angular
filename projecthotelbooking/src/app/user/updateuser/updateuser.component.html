@@ -1,0 +1,40 @@
+
+
+
+<div class="container">
+   
+    <form (ngSubmit)="updateUser()">
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">User ID</label>
+            <input type="text" class="form-control"   name="name" [(ngModel)]="user.userid">
+            
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" class="form-control"   name="name" [(ngModel)]="user.name">
+            
+        </div>
+        
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Email</label>
+            <input type="email" class="form-control" name="city" [(ngModel)]="user.email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="number" class="form-control" name="state" [(ngModel)]="user.password">
+        </div>
+      
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Phonenumber</label>
+            <input type="text" class="form-control" name="availableUnits" [(ngModel)]="user.phonenumber">
+        </div>
+       
+
+    
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+
+</div>
+

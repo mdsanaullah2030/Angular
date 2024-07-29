@@ -23,5 +23,24 @@ constructor(
   ngOnInit(): void {
     this.bookings=this.bookingService.getAllBooking();
   }
+  deletebooking(id:string){
+this.bookingService.deletebooking(id)
+.subscribe({
+  next:res=>{
+    this.bookings=this.bookingService.getAllBooking();
+    this.router.navigate(['booking']);
+  },
+  error: error => {
+    console.log(error);
+
+  }
+});
+
+  }
+  updateBooking(id:string){
+    this.router.navigate(['updatebooking',id]);
+    //path akoi name dite hobe nahole data asbe na  updatebooking //
+  }
+  searchText='';
 
 }

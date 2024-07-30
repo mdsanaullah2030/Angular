@@ -1,6 +1,6 @@
 export class RoomModel {
     id!:string;
-    roomid!: number;
+    roomid!: string;
     roomnumber!: number;
     roomtype!: string;
     price!: number;

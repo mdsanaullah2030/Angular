@@ -17,7 +17,7 @@
       }
   room!: {
         id:string|undefined
-        roomid: number |undefined;
+        roomid: string |undefined;
         roomnumber: number |undefined;
         roomtype: string |undefined;
         price: number |undefined;

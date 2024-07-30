@@ -6,27 +6,18 @@
       "email": "asfasdd@gmail.com",
       "password": 12342,
       "phonenumber": "24234",
-      "userid": "32423"
+      "userid": "ass"
     }
   ],
   "room": [
     {
-      "id": "1",
-      "roomid": "number",
-      "roomnumber": "string",
-      "roomtype": "string",
-      "price": "number",
-      "status": "string",
-      "description": "string"
-    },
-    {
-      "id": "cae6",
-      "roomid": 111,
-      "roomnumber": 202,
-      "roomtype": "singel",
-      "price": 5000,
-      "status": "sd",
-      "description": "sdfsd"
+      "id": "581b",
+      "roomid": "sss",
+      "roomnumber": 104,
+      "roomtype": "ac",
+      "price": 3999,
+      "status": "as",
+      "description": "weqw"
     }
   ],
   "booking": [
@@ -44,7 +35,7 @@
         "phonenumber": "57898900",
         "room": {
           "id": "4355",
-          "roomid": 2323,
+          "roomid": "123",
           "roomnumber": 42342,
           "roomtype": "ac",
           "price": 13123123,

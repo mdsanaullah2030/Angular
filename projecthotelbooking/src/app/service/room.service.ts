@@ -32,7 +32,7 @@ return this.httpClient.delete(this.baseUrl+"/"+id);
     return this.httpClient.get(this.baseUrl+"/"+id);
   }
 
-  getAllForUserView():Observable<RoomModel[]>{
+  getAllForRoomView():Observable<RoomModel[]>{
     return this.httpClient.get<RoomModel[]>(this.baseUrl)
     .pipe(
       catchError(this.handleError)

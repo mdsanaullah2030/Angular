@@ -10,7 +10,7 @@ export class BookingService {
 
   constructor(private httpClient:HttpClient) { }
 
-  getAllbooking():Observable<any>{
-    return this.httpClient.get(this.baseUrl)
+  getAllbooking():Observable<any[]>{
+    return this.httpClient.get<any[]>(this.baseUrl);
   }
 }

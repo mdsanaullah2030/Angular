@@ -15,12 +15,12 @@
     <tbody>
       <tr *ngFor="let booking of booking">
 
-        <td>{{ booking.bookingid | date }}</td>
+        <td>{{ booking.bookingid }}</td>
         <td>{{ booking.checkindate | date }}</td>
         <td>{{ booking.checkoutdate | date }}</td>
         <td>{{ booking.bookingdate |date }}</td>
-        <td>{{ booking.user.userid }}</td>
-        <td>{{ booking.room.roomid }}</td>
+        <td>{{ booking.user?.userid }}</td>
+        <td>{{ booking.room?.roomid }}</td>
       </tr>
     </tbody>
   </table>

@@ -9,7 +9,7 @@ import { RoomService } from '../../service/room.service';
   styleUrl: './viewbooking.component.css'
 })
 export class ViewbookingComponent implements OnInit{
-booking:any;
+booking:any[]=[];
 user:any;
 room:any;
 constructor(
@@ -18,9 +18,21 @@ constructor(
   private roomservice:RoomService
 ){}
   ngOnInit(): void {
- this.booking=this.bookingService.getAllbooking();
+this.bookingService.getAllbooking()
+ .subscribe(data=>{
+  this.booking=data;
 
- this.user=this.roomservice.getAllForUserView();
+ })
+
+ this.room=this.roomservice.getAllForRoomView()
+ .subscribe(data=>{
+  this.room=data;
+ })
+
+ this.user=this.userservice.getAllUserForView()
+ .subscribe(data=>{
+  this.user=data;
+ });
   }
 
 }

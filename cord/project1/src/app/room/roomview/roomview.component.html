@@ -1,0 +1,33 @@
+<div class="date-filter">
+    <label for="start-date">Start Date:</label>
+    <input type="date" id="start-date" [(ngModel)]="startDate">
+  
+    <label for="end-date">End Date:</label>
+    <input type="date" id="end-date" [(ngModel)]="endDate">
+  
+    <button (click)="filterBookings()">Filter</button>
+  </div>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Check-in Date</th>
+        <th>Check-out Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of filteredBookings">
+        <td>{{ booking.id }}</td>
+        <td>{{ booking.name }}</td>
+        <td>{{ booking.description }}</td>
+        <td>{{ booking.price | currency }}</td>
+        <td>{{ booking.checkInDate | date }}</td>
+        <td>{{ booking.checkOutDate | date }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

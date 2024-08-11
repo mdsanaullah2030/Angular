@@ -1,0 +1,42 @@
+
+<p>createlocation works!</p>
+
+
+
+
+<div class="container">
+   
+    <form (ngSubmit)="updateBooking()">
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">RoomNumber</label>
+            <input type="text" class="form-control"   name="roomNumber" [(ngModel)]="booking.roomNumber">
+            
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">GuestName</label>
+            <input type="text" class="form-control" name="guestName" [(ngModel)]="booking.guestName">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">CheckInDate</label>
+            <input type="date" class="form-control" name="checkInDate" [(ngModel)]="booking.checkInDate">
+        </div>
+    
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">CheckOutDate</label>
+            <input type="date" class="form-control" name="checkOutDate" [(ngModel)]="booking.checkOutDate">
+        </div>
+        <div class="mb-3 form-check">
+            <label for="exampleInputPassword1" class="form-label">TotalPrice</label>
+            
+            <input type="number" class="form-control" name="totalPrice" [(ngModel)]="booking.totalPrice">
+        </div>
+       
+
+    
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+
+</div>
+

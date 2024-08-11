@@ -1,0 +1,42 @@
+
+
+<div class="container">
+    <h1 class="text-center">Location Add Form</h1>
+    <form [formGroup]="formValue">
+
+        <div class="mb-3">
+            <label for="roomid" class="form-label">Room Id</label>
+            <input type="text" class="form-control" id="roomid" formControlName="roomid" placeholder="roomid location name">
+        </div>
+
+        <div class="mb-3">
+            <label for="roomnumber" class="form-label">roomnumber</label>
+            <input type="number" class="form-control" id="roomnumber" formControlName="roomnumber" placeholder="Enter city">
+        </div>
+
+        <div class="mb-3">
+            <label for="roomtype" class="form-label">roomtype</label>
+            <input type="text" class="form-control" id="roomtype" formControlName="roomtype" placeholder="Enter city">
+
+        </div>
+
+        <div class="mb-3">
+            <label for="price" class="form-label">price</label>
+            <input type="number" class="form-control" id="price" formControlName="price" placeholder="Enter photo URL">
+        </div>
+
+        <div class="mb-3">
+            <label for="status" class="form-label">status</label>
+            <input type="text" class="form-control" id="status" formControlName="status" placeholder="Enter number of available units">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">description</label>
+            <input type="text" class="form-control" id="description" formControlName="description" placeholder="Enter number of available units">
+        </div>
+
+       
+
+        <button type="submit" class="btn btn-outline-success" (click)="createroom()">Submit</button>
+    </form>
+</div>
+

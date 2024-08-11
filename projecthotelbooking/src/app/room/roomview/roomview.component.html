@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+</head>
+
+<body>
+
+    <div class="container mt-5">
+       
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                   
+                    <th>Room ID</th>
+                    <th>Room Number</th>
+                    <th>Room Type</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Room of rooms | async">
+                   
+                    <td>{{ Room.roomid }}</td>
+                    <td>{{ Room.roomnumber }}</td>
+                    <td>{{ Room.roomtype }}</td>
+                   
+                    <td>{{ Room.price }}</td>
+                    <td>{{ Room.status }}</td>
+                    <td>{{ Room.description }}</td>
+                    <td>
+                        <button class="btn btn-warning btn-m-2 p-1" (click)="updateroom(Room.id)">Edit</button>
+                    </td>
+                    <td>
+                         <button class="btn btn-danger btn- m-2 p-1"(click)="deleteroom(Room.id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

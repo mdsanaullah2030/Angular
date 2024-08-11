@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Room Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      padding: 20px;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    input, select {
+      padding: 10px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hotel Room Booking Price Calculator</h1>
+    <table>
+      <tr>
+        <th>Room Type</th>
+        <th>Price per Night</th>
+      </tr>
+      <tr>
+        <td>Single Room</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>Double Room</td>
+        <td>$150</td>
+      </tr>
+      <tr>
+        <td>Deluxe Room</td>
+        <td>$200</td>
+      </tr>
+    </table>
+    <label for="room-type">Select Room Type:</label>
+    <select id="room-type">
+      <option value="100">Single Room - $100</option>
+      <option value="150">Double Room - $150</option>
+      <option value="200">Deluxe Room - $200</option>
+    </select><br>
+    <label for="checkin">Check-in Date:</label>
+    <input type="date" id="checkin"><br>
+    <label for="checkout">Check-out Date:</label>
+    <input type="date" id="checkout"><br>
+    <button onclick="calculatePrice()">Calculate Price</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function calculatePrice() {
+      const roomType = document.getElementById('room-type').value;
+      const checkin = document.getElementById('checkin').value;
+      const checkout = document.getElementById('checkout').value;
+      const resultDiv = document.getElementById('result');
+
+      if (!checkin || !checkout) {
+        resultDiv.textContent = 'Please select both check-in and check-out dates.';
+        return;
+      }
+
+      const checkinDate = new Date(checkin);
+      const checkoutDate = new Date(checkout);
+
+      if (checkoutDate <= checkinDate) {
+        resultDiv.textContent = 'Check-out date must be after check-in date.';
+        return;
+      }
+
+      const oneDay = 24 * 60 * 60 * 1000;
+      const days = Math.round((checkoutDate - checkinDate) / oneDay);
+      const totalPrice = days * roomType;
+
+      resultDiv.textContent = `Total Price for ${days} night(s): $${totalPrice}`;
+    }
+  </script>
+</body>
+</html>

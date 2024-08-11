@@ -1,0 +1,67 @@
+/* General Body Styling */
+body {
+    background-color: #0e4479; /* Light grey background */
+    font-family: Arial, sans-serif;
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px; /* Limit container width for better readability */
+    margin-top: 50px; /* Space from the top */
+    padding: 20px; /* Padding inside the container */
+    background-color: #1d0680; /* White background for the form area */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(236, 3, 3, 0.1); /* Subtle shadow for depth */
+}
+
+/* Form Header Styling */
+h2 {
+    color: #343a40; /* Dark grey color for the header text */
+    font-weight: 600; /* Slightly bolder text */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 1.5rem; /* Space between form groups */
+}
+
+/* Label Styling */
+.form-label {
+    font-weight: 500; /* Medium font weight for labels */
+    color: #495057; /* Dark grey color for labels */
+}
+
+/* Input Field Styling */
+.form-control {
+    border-radius: 0.25rem; /* Rounded corners */
+    border-color: #ced4da; /* Light grey border color */
+    box-shadow: none; /* Remove box shadow for inputs */
+    transition: border-color 0.2s ease; /* Smooth transition for border color */
+}
+
+/* Input Focus Styling */
+.form-control:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Subtle shadow on focus */
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff; /* Blue background */
+    border-color: #007bff; /* Matching border color */
+    border-radius: 0.25rem; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Larger font size for better readability */
+}
+
+/* Button Hover Styling */
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+    border-color: #004085; /* Darker border color on hover */
+}
+
+/* Button Focus Styling */
+.btn-primary:focus, .btn-primary:active {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); /* Enhanced focus shadow */
+}

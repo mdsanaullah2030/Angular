@@ -1,0 +1,65 @@
+{
+  "User": [
+    {
+      "id": "dd31",
+      "name": "hamidullah",
+      "email": "hamidullah@gmail.com",
+      "password": 12342,
+      "phonenumber": "01741779995",
+      "userid": "1234"
+    },
+    {
+      "id": "d640",
+      "userid": "1234",
+      "name": "sanaullah",
+      "email": "sanaullah@gmail.com",
+      "password": 123456788,
+      "phonenumber": "01741779995"
+    }
+  ],
+  "room": [
+    {
+      "id": "581b",
+      "roomid": "sss",
+      "roomnumber": 104,
+      "roomtype": "ac",
+      "price": 3999,
+      "status": "as",
+      "description": "weqw"
+    },
+    {
+      "id": "592f",
+      "roomid": "101",
+      "roomnumber": 505,
+      "roomtype": "AC",
+      "price": 4998,
+      "status": "1st Foor",
+      "description": "good room"
+    }
+  ],
+  "booking": [
+    {
+      "id": "1",
+      "bookingid": 34,
+      "checkindate": "2024-07-28",
+      "checkoutdate": "2024-07-30",
+      "bookingdate": "2020-07-25",
+      "user": {
+        "userid": "13213",
+        "name": "sdsns",
+        "email": "adad@gmail.com",
+        "password": "34455",
+        "phonenumber": "57898900",
+        "room": {
+          "id": "4355",
+          "roomid": "123",
+          "roomnumber": 42342,
+          "roomtype": "ac",
+          "price": 13123123,
+          "status": "reef",
+          "description": "adfasdfs"
+        }
+      }
+    }
+  ]
+}

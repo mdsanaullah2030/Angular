@@ -1,0 +1,39 @@
+<p>createbooking works!</p>
+
+
+
+
+
+
+
+<div class="container">
+    <form [formGroup]="fromValue">
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" class="form-control"   formControlName="name">
+            
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">email</label>
+            <input type="email" class="form-control" formControlName="email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">password</label>
+            <input type="number" class="form-control" formControlName="password">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">phonenumber</label>
+            <input type="text" class="form-control" formControlName="phonenumber">
+        </div>
+       
+
+    
+        <button type="submit" class="btn btn-primary" (click)=" createUser()">Submit</button>
+    </form>
+
+</div>
+
+
+

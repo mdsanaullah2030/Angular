@@ -30,7 +30,7 @@ constructor(
       userid:[''],
       name: [''],
       email: [''],
-      password: [''],
+      nid: [''],
       phonenumber: [''],
 
 
@@ -45,7 +45,7 @@ constructor(
 
     this.user.email = this.fromValue.value.email;
 
-    this.user.password = this.fromValue.value.password;
+    this.user.nid = this.fromValue.value.nid;
 
     this.user.phonenumber = this.fromValue.value.phonenumber;
 

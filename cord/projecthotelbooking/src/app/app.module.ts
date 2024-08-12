@@ -9,12 +9,26 @@ import { UpdateuserComponent } from './user/updateuser/updateuser.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { RoomviewComponent } from './room/roomview/roomview.component';
+import { RoomupdateComponent } from './room/roomupdate/roomupdate.component';
+import { CreateroomComponent } from './room/createroom/createroom.component';
+import { ViewbookingComponent } from './booking/viewbooking/viewbooking.component';
+import { UpdatebookingComponent } from './booking/updatebooking/updatebooking.component';
+import { CreatebookingComponent } from './booking/createbooking/createbooking.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ViewuserComponent,
     CreateuserComponent,
-    UpdateuserComponent
+    UpdateuserComponent,
+
+    RoomviewComponent,
+    RoomupdateComponent,
+    CreateroomComponent,
+    ViewbookingComponent,
+    UpdatebookingComponent,
+    CreatebookingComponent
   ],
   imports: [
     BrowserModule,

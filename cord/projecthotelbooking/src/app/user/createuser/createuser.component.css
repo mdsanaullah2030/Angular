@@ -1,0 +1,45 @@
+/* Container Margin */
+.container {
+    margin-top: 50px;
+}
+
+/* Card Shadow and Border Radius */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Card Header Background and Text Styling */
+.card-header {
+    background-color: #050a0f;
+    color: rgb(138, 5, 5);
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Form Input Focus State */
+.form-control:focus {
+    border-color: #0f2135;
+    box-shadow: none;
+}
+
+/* Submit Button Styling */
+.btn-primary {
+    background-color: #52077542;
+    border-color: #68070b;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Submit Button Hover State */
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Responsive Form Width */
+@media (max-width: 768px) {
+    .col-md-6 {
+        width: 100%;
+    }
+}

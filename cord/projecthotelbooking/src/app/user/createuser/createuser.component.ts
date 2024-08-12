@@ -27,10 +27,10 @@ constructor(
   ngOnInit(): void {
     this.fromValue = this.formBulder.group({
 
-
+      userid:[''],
       name: [''],
       email: [''],
-      password: [''],
+      nid: [''],
       phonenumber: [''],
 
 
@@ -40,11 +40,12 @@ constructor(
  
   }
   createUser() {
+    this.user.userid = this.fromValue.value.userid;
     this.user.name = this.fromValue.value.name;
 
     this.user.email = this.fromValue.value.email;
 
-    this.user.password = this.fromValue.value.password;
+    this.user.nid = this.fromValue.value.nid;
 
     this.user.phonenumber = this.fromValue.value.phonenumber;
 

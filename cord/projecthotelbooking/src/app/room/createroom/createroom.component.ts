@@ -3,6 +3,7 @@ import { RoomModel } from '../../model/room.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RoomService } from '../../service/room.service';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-createroom',
@@ -12,15 +13,17 @@ import { Router } from '@angular/router';
 export class CreateroomComponent implements OnInit {
   room: RoomModel = new RoomModel();
   formValue!: FormGroup;
+  roomData: any;
 
-  roomtyp: { value: string, label: string, price: number }[] = [
-    { value: 'Single Room', label: 'Single Room', price: 5000 },
-    { value: 'Double Room', label: 'Double Room', price: 7000 },
-    { value: 'Triple Room', label: 'Triple Room', price: 9000 },
-    { value: 'Family Room', label: 'Family Room', price: 12000 },
-    { value: 'Superior Room', label: 'Superior Room', price: 15000 },
-    { value: 'Executive Room', label: 'Executive Room', price: 20000 },
-    { value: 'Presidential Suite', label: 'Presidential Suite', price: 30000 },
+  roomtyp: { value: string, label: string }[] = [
+    { value: 'Single Room', label: 'Single Room' },
+    { value: 'Double Room', label: 'Double Room' },
+    { value: 'Triple Room', label: 'Triple Room' },
+    { value: 'Family Room', label: 'Family Room' },
+    { value: 'Superior Room', label: 'Superior Room' },
+    { value: 'Executive Room', label: 'Executive Room' },
+    { value: 'Presidential Suite', label: 'Presidential Suite' },
+    
   ];
 
   status: { value: string, label: string }[] = [
@@ -36,6 +39,7 @@ export class CreateroomComponent implements OnInit {
   constructor(
     private roomService: RoomService,
     private router: Router,
+    private httpClient: HttpClient,
     private formBuilder: FormBuilder
   ) {}
 
@@ -44,19 +48,9 @@ export class CreateroomComponent implements OnInit {
       roomid: [''],
       roomnumber: [''],
       roomtype: ['', Validators.required],
-      price: [{ value: '', disabled: true }, Validators.required],
+      price: [''],
       status: ['', Validators.required],
       description: ['']
-    });
-
-    // Listen for changes to the roomtype field
-    this.formValue.get('roomtype')?.valueChanges.subscribe((selectedRoomType) => {
-      const selectedRoom = this.roomtyp.find(room => room.value === selectedRoomType);
-      if (selectedRoom) {
-        this.formValue.patchValue({
-          price: selectedRoom.price
-        });
-      }
     });
   }
 

@@ -20,6 +20,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LocationComponent } from './location/location.component';
 import { CreatelocationComponent } from './location/createlocation/createlocation.component';
 import { UpdatelocationComponent } from './location/updatelocation/updatelocation.component';
+import { ViewhotelComponent } from './hotelList/viewhotel/viewhotel.component';
+import { CreatehotelComponent } from './hotelList/createhotel/createhotel.component';
+import { UpdatehotelComponent } from './hotelList/updatehotel/updatehotel.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { UpdatelocationComponent } from './location/updatelocation/updatelocatio
     RegistrationComponent,
     LocationComponent,
     CreatelocationComponent,
-    UpdatelocationComponent
+    UpdatelocationComponent,
+    ViewhotelComponent,
+    CreatehotelComponent,
+    UpdatehotelComponent
   ],
   imports: [
     BrowserModule,

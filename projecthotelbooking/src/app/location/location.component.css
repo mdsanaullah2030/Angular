@@ -1,0 +1,55 @@
+/* Add some padding to the container */
+.container {
+    padding: 20px;
+    margin: auto;
+    max-width: 800px;
+}
+
+/* Style the table headers */
+.table thead.thead-dark {
+    background-color: #343a40;
+    color: white;
+}
+
+/* Style the table rows */
+.table tbody tr {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons */
+.btn-warning {
+    color: #fff;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+/* Adjust spacing and padding */
+.btn-m-2 {
+    margin: 2px;
+}
+
+.p-1 {
+    padding: 4px;
+}
+
+/* Ensure the table is responsive */
+.table-responsive {
+    overflow-x: auto;
+}

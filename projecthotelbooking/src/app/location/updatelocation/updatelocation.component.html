@@ -1,0 +1,38 @@
+
+
+<div class="container">
+   
+    <form (ngSubmit)="updateLocation()">
+
+   
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">CoxsBazar</label>
+            <input type="text" class="form-control" name="CoxsBazar" [(ngModel)]="location.CoxsBazar">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Dhaka</label>
+            <input type="text" class="form-control" name="Dhaka" [(ngModel)]="location.Dhaka">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Sylhet</label>
+            <input type="text" class="form-control" name="Sylhet" [(ngModel)]="location.Sylhet">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Chittagong</label>
+            <input type="text" class="form-control" name="Chittagong" [(ngModel)]="location.Chittagong">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Sreemangal</label>
+            <input type="text" class="form-control" name="Sreemangal" [(ngModel)]="location.Sreemangal">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Kuakata</label>
+            <input type="text" class="form-control" name="Kuakata" [(ngModel)]="location.Kuakata">
+        </div>
+     
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+
+</div>
+

@@ -15,6 +15,11 @@ import { CreateroomComponent } from './room/createroom/createroom.component';
 import { ViewbookingComponent } from './booking/viewbooking/viewbooking.component';
 import { UpdatebookingComponent } from './booking/updatebooking/updatebooking.component';
 import { CreatebookingComponent } from './booking/createbooking/createbooking.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { LocationComponent } from './location/location.component';
+import { CreatelocationComponent } from './location/createlocation/createlocation.component';
+import { UpdatelocationComponent } from './location/updatelocation/updatelocation.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import { CreatebookingComponent } from './booking/createbooking/createbooking.co
     CreateroomComponent,
     ViewbookingComponent,
     UpdatebookingComponent,
-    CreatebookingComponent
+    CreatebookingComponent,
+    LoginComponent,
+    RegistrationComponent,
+    LocationComponent,
+    CreatelocationComponent,
+    UpdatelocationComponent
   ],
   imports: [
     BrowserModule,

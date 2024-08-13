@@ -1,4 +1,29 @@
 {
+  "location": [
+    {
+      "id": "1",
+      "CoxsBazar": "xxxx",
+      "Dhaka": "vvvvvvv",
+      "Sylhet": "cccc",
+      "Chittagong": "bbbb",
+      "Sreemangal": "aaaa",
+      "Kuakata": "qqqq"
+    }
+  ],
+  "Registration": [
+    {
+      "id": "1",
+      "name": "Sanaullah",
+      "email": "Sanaullah@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "7d45",
+      "name": "Raju",
+      "email": "Raju@gmail.com",
+      "password": "123456789"
+    }
+  ],
   "User": [
     {
       "userid": "1001",

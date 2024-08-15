@@ -1,13 +1,13 @@
 {
   "location": [
     {
-      "id": "1",
-      "CoxsBazar": "xxxx",
-      "Dhaka": "vvvvvvv",
-      "Sylhet": "cccc",
-      "Chittagong": "bbbb",
-      "Sreemangal": "aaaa",
-      "Kuakata": "qqqq"
+      "id": "32d6",
+      "CoxsBazar": "Best Western Heritage",
+      "Dhaka": "The Westin Dhaka",
+      "Sylhet": "Grand Sylhet Hotel & Resort",
+      "Chittagong": "Well Park Residence Boutique Hotel",
+      "Sreemangal": "Balishira Resort Ltd",
+      "Kuakata": "Sikder Resort & Villas"
     }
   ],
   "Registration": [
@@ -95,6 +95,14 @@
       "status": "Checked-out",
       "description": "dfgsd",
       "price": 7000
+    },
+    {
+      "id": "c67a",
+      "roomid": "666",
+      "roomnumber": 555,
+      "roomtype": "Triple Room",
+      "status": "Confirmed",
+      "description": "sss"
     }
   ],
   "booking": [

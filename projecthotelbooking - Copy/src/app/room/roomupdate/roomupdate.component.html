@@ -1,0 +1,43 @@
+<div class="container">
+  <form (ngSubmit)="updateroom()">
+    <div class="mb-3">
+      <label for="roomid" class="form-label">Room ID</label>
+      <input type="text" class="form-control" name="roomid" [(ngModel)]="room.roomid" disabled>
+    </div>
+
+    <div class="mb-3">
+      <label for="roomnumber" class="form-label">Room Number</label>
+      <input type="number" class="form-control" name="roomnumber" [(ngModel)]="room.roomnumber">
+    </div>
+
+    <div class="mb-3">
+      <label for="roomtype" class="form-label">Room Type</label>
+      <select class="form-select" name="roomtype" [(ngModel)]="room.roomtype" (change)="updatePriceBasedOnRoomType()">
+        <option *ngFor="let option of roomtyp" [value]="option.value">
+          {{ option.label }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input type="number" class="form-control" name="price" [(ngModel)]="room.price" disabled>
+    </div>
+
+    <div class="mb-3">
+      <label for="status" class="form-label">Status</label>
+      <select class="form-select" name="status" [(ngModel)]="room.status">
+        <option *ngFor="let option of status" [value]="option.value">
+          {{ option.label }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <input type="text" class="form-control" name="description" [(ngModel)]="room.description">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { LocationComponent } from './location/location.component';
 import { CreatelocationComponent } from './location/createlocation/createlocation.component';
 import { UpdatelocationComponent } from './location/updatelocation/updatelocation.component';
+import { ViewhotelComponent } from './hotelList/viewhotel/viewhotel.component';
 
 const routes: Routes = [
   {path:'view',component:ViewuserComponent},
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'location',component:LocationComponent},
   {path:'createlocation',component:CreatelocationComponent},
-  {path:'updatelocation/:id',component:UpdatelocationComponent}
+  {path:'updatelocation/:id',component:UpdatelocationComponent},
+  {path:'hotel',component:ViewhotelComponent}
   
 ];
 

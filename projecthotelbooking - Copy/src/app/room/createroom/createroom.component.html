@@ -1,0 +1,62 @@
+<div class="container">
+  <h1 class="text-center">Room Creation Form</h1>
+  <form [formGroup]="formValue" (ngSubmit)="createroom()">
+    
+    <div class="mb-3">
+      <label for="roomid" class="form-label">Room Id</label>
+      <input type="text" class="form-control" id="roomid" formControlName="roomid" placeholder="Room ID">
+    </div>
+
+    <div class="mb-3">
+      <label for="roomnumber" class="form-label">Room Number</label>
+      <input type="number" class="form-control" id="roomnumber" formControlName="roomnumber" placeholder="Enter Room Number" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="roomtype" class="form-label">Room Type</label>
+      <select class="form-select" id="roomtype" formControlName="roomtype" required>
+        <option *ngFor="let option of roomtyp" [value]="option.value">
+          {{ option.label }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input type="number" class="form-control" id="price" formControlName="price" placeholder="Enter Price" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="status" class="form-label">Status</label>
+      <select class="form-select" id="status" formControlName="status" required>
+        <option *ngFor="let option of status" [value]="option.value">
+          {{ option.label }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <input type="text" class="form-control" id="description" formControlName="description" placeholder="Enter Description">
+    </div>
+
+    <button type="submit" class="btn btn-outline-success">Submit</button>
+  </form>
+
+  <!-- Table to Display Room Types and Prices -->
+  <h2 class="text-center mt-5">Available Room Types and Prices</h2>
+  <table class="table table-bordered mt-3">
+    <thead>
+      <tr>
+        <th>Room Type</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let room of roomtyp">
+        <td>{{ room.label }}</td>
+        <td>{{ room.price | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

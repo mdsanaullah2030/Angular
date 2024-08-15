@@ -1,0 +1,27 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Bookng ID</th>
+
+        <th>check in Date</th>
+        <th>Check Out Date</th>
+        <th>Booking Date </th>
+        <th>User ID</th>
+        <th>Room ID</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of booking">
+
+        <td>{{ booking.bookingid }}</td>
+        <td>{{ booking.checkindate | date }}</td>
+        <td>{{ booking.checkoutdate | date }}</td>
+        <td>{{ booking.bookingdate |date }}</td>
+        <td>{{ booking.user?.userid }}</td>
+        <td>{{ booking.user.room?.roomid }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

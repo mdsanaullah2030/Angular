@@ -2,26 +2,33 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Bookng ID</th>
+        <th> userid</th>
 
-        <th>check in Date</th>
-        <th>Check Out Date</th>
-        <th>Booking Date </th>
-        <th>User ID</th>
-        <th>Room ID</th>
+        <th>CoxsBazar</th>
+        <th>roomtype</th>
+        <th>roomid</th>
+        <th>checkindate</th>
+        <th>checkoutdate</th>
+        <th>price</th>
 
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let booking of booking">
-
-        <td>{{ booking.bookingid }}</td>
+        <td>{{ booking.user?.userid }}</td>
+        <td>{{ booking.user.room.location.CoxsBazar }}</td>
+        <td>{{ booking.user.room?.roomtype }}</td>
+        <td>{{ booking.user.room?.roomid }}</td>
         <td>{{ booking.checkindate | date }}</td>
         <td>{{ booking.checkoutdate | date }}</td>
-        <td>{{ booking.bookingdate |date }}</td>
-        <td>{{ booking.user?.userid }}</td>
         <td>{{ booking.user.room?.roomid }}</td>
+        
+        
+        
       </tr>
     </tbody>
   </table>
 </div>
+
+
+

@@ -7,3 +7,5 @@ export class RoomModel {
     status!: string;
     description!: string;
   }
+
+  

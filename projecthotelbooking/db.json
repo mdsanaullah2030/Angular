@@ -117,9 +117,20 @@
           "roomtype": "ac",
           "price": 13123123,
           "status": "reef",
-          "description": "adfasdfs"
+          "description": "adfasdfs",
+          "location":{
+            "id": "4355",
+            "CoxsBazar": "Best Western Heritage",
+            "Dhaka": "Amari Dhaka Bangladesh",
+            "Sylhet": "Grand Sylhet Hotel & Resort",
+            "Chittagong": "The Peninsula Chittagong",
+            "Sreemangal": "Balishira Resort Ltd",
+            "Kuakata": "Sikder Resort & Villas"
+          }
         }
       }
     }
   ]
 }
+
+

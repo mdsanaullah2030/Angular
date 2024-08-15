@@ -24,6 +24,16 @@
         status: string |undefined;
         description: string |undefined;
       }
+      location!:{
+
+        id: number|undefined
+        CoxsBazar:string|undefined
+        Dhaka: string|undefined
+        Sylhet: string|undefined
+        Chittagong: string|undefined
+        Sreemangal: string|undefined
+        Kuakata: string|undefined
+      }
 
      
   }

@@ -8,19 +8,19 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './location.component.html',
   styleUrl: './location.component.css'
 })
-export class LocationComponent implements OnInit{
+export class LocationComponent implements OnInit {
   locations: any;
 
   constructor
-  (private locationService:LocationService,
-    private router:Router,
-  private httpClient:HttpClient){
+    (private locationService: LocationService,
+      private router: Router,
+      private httpClient: HttpClient) {
 
 
   }
   ngOnInit(): void {
-   
-    this.locations=this.locationService.getAllLocation();
+
+    this.locations = this.locationService.getAllLocation();
   }
   deleteLocation(id: string) {
     //location service hote delete mathod call dite (ID)//
@@ -41,9 +41,13 @@ export class LocationComponent implements OnInit{
 
   }
   //Location updatelocation ke call dilam path akoy name dite hobe//
-  
-  updateLocation(id:string){
-    this.router.navigate(['updatelocation',id]);
-  }
 
+  updateLocation(id: string) {
+    this.router.navigate(['updatelocation', id]);
+
+
+  }
+  createlocation() {
+    this.router.navigate(['createlocation']);
+  }
 }

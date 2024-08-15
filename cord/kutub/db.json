@@ -23,6 +23,16 @@
       "availableUnits": 2,
       "wifi": true,
       "laundry": true
+    },
+    {
+      "id": "e3f8",
+      "name": "MD SANAULLAH",
+      "city": "Dhaka",
+      "state": "sd",
+      "photo": "sds",
+      "availableUnits": "sdfs",
+      "wifi": true,
+      "laundry": true
     }
   ],
   "students": [

@@ -8,6 +8,15 @@
       "Chittagong": "Well Park Residence Boutique Hotel",
       "Sreemangal": "Balishira Resort Ltd",
       "Kuakata": "Sikder Resort & Villas"
+    },
+    {
+      "id": "101c",
+      "CoxsBazar": "Best Western Heritage",
+      "Dhaka": "Amari Dhaka Bangladesh",
+      "Sylhet": "Grand Sylhet Hotel & Resort",
+      "Chittagong": "The Peninsula Chittagong",
+      "Sreemangal": "Balishira Resort Ltd",
+      "Kuakata": "Sikder Resort & Villas"
     }
   ],
   "Registration": [
@@ -43,24 +52,6 @@
     }
   ],
   "room": [
-    {
-      "id": "581b",
-      "roomid": "sss",
-      "roomnumber": 104,
-      "roomtype": "ac",
-      "price": 3999,
-      "status": "as",
-      "description": "weqw"
-    },
-    {
-      "id": "592f",
-      "roomid": "101",
-      "roomnumber": 505,
-      "roomtype": "AC",
-      "price": 4998,
-      "status": "1st Foor",
-      "description": "good room"
-    },
     {
       "id": "c71b",
       "roomid": "234",
@@ -100,9 +91,10 @@
       "id": "c67a",
       "roomid": "666",
       "roomnumber": 555,
-      "roomtype": "Triple Room",
+      "roomtype": "Double Room",
       "status": "Confirmed",
-      "description": "sss"
+      "description": "sss",
+      "price": 7000
     }
   ],
   "booking": [

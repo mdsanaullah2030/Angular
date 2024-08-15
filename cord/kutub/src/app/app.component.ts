@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kutub';
-  myimge:string="assets/image/20190411_202147.jpg";
+ 
 
 }

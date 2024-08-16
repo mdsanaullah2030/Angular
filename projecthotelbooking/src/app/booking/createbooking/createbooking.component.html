@@ -5,30 +5,30 @@
 
   <form [formGroup]="bookingForm" (ngSubmit)="createBooking()">
 
-    <div class="mb-3" formGroupName="userid">
+    <div class="mb-3" formGroupName="user">
       <div class="invalid-feedback">Please select a location.</div>
-      <label for="userid" class="form-label">userid:</label>
-      <select id="userid" formControlName="name" class="form-select" required>
+      <label for="user" class="form-label">userid:</label>
+      <select id="user" formControlName="userid" class="form-select" required>
         <option value="" disabled selected>Select your location</option>
         <option *ngFor="let loc of user" [ngValue]="loc.userid">{{loc.userid}}</option>
       </select>
     </div>
 
 
-    <div class="mb-3" formGroupName="CoxsBazar">
+    <div class="mb-3" formGroupName="location">
       <div class="invalid-feedback">Please select a CoxsBazar.</div>
-      <label for="CoxsBazar" class="form-label">CoxsBazar:</label>
-      <select id="CoxsBazar" formControlName="name" class="form-select" required>
+      <label for="location" class="form-label">CoxsBazar:</label>
+      <select id="location" formControlName="CoxsBazar" class="form-select" required>
         <option value="" disabled selected>Select your CoxsBazar</option>
         <option *ngFor="let loc of location" [ngValue]="loc.CoxsBazar">{{loc.CoxsBazar}}</option>
       </select>
     </div>
 
 
-    <div class="mb-3" formGroupName="roomtype">
+    <div class="mb-3" formGroupName="room">
       <div class="invalid-feedback">Please select a roomtype.</div>
-      <label for="roomtype" class="form-label">roomtype:</label>
-      <select id="roomtype" formControlName="name" class="form-select" required>
+      <label for="room" class="form-label">roomtype:</label>
+      <select id="room" formControlName="room" class="form-select" required>
         <option value="" disabled selected>Select your roomtype</option>
         <option *ngFor="let loc of room" [ngValue]="loc.roomtype">{{loc.roomtype}}</option>
       </select>
@@ -36,10 +36,10 @@
 
 
 
-    <div class="mb-3" formGroupName="roomid">
+    <div class="mb-3" formGroupName="room">
       <div class="invalid-feedback">Please select a roomid.</div>
-      <label for="roomid" class="form-label">roomid:</label>
-      <select id="roomid" formControlName="name" class="form-select" required>
+      <label for="room" class="form-label">roomid:</label>
+      <select id="room" formControlName="room" class="form-select" required>
         <option value="" disabled selected>Select your roomid</option>
         <option *ngFor="let loc of room" [ngValue]="loc.roomid">{{loc.roomid}}</option>
       </select>
@@ -55,14 +55,14 @@
       <input id="checkoutdate" type="date" class="form-control" formControlName="checkoutdate" placeholder="Enter your cell number">
     </div>
 
-    <!-- <div class="mb-3" formGroupName="price">
+    <div class="mb-3" formGroupName="room">
       <div class="invalid-feedback">Please select a price.</div>
-      <label for="price" class="form-label">Location:</label>
-      <select id="price" formControlName="name" class="form-select" required>
+      <label for="room" class="form-label">Price</label>
+      <select id="room" formControlName="price" class="form-select" required>
         <option value="" disabled selected>Select your price</option>
-        <option *ngFor="let loc of price" [ngValue]="loc.price">{{loc.price}}</option>
+        <option *ngFor="let loc of room" [ngValue]="loc.price">{{loc.price}}</option>
       </select>
-    </div> -->
+    </div>
 
    
 

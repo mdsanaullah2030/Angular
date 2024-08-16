@@ -33,7 +33,6 @@ const routes: Routes = [
   {path:'bookingc',component:CreatebookingComponent}
   
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

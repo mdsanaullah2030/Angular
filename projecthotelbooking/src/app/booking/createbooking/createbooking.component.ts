@@ -89,10 +89,46 @@ export class CreatebookingComponent implements OnInit {
     .subscribe(userid => {
       const selectedUser = this.user.find(user => user.userid === userid);
       if (selectedUser) {
-        this.bookingForm.get('user')?.patchValue(selectedUser);
+        this.bookingForm.patchValue({ user: selectedUser });
+
       }
     });
+    this.bookingForm.get('location')?.get('CoxsBazar')?.valueChanges
+    .subscribe(CoxsBazar=>{
+      const selectLocation=this.location.find(loc=>loc.CoxsBazar===CoxsBazar);
+      if (selectLocation) {
+        this.bookingForm.patchValue({ location: selectLocation });
+
+      }
+    });
+    this.bookingForm.get('room')?.get('roomtype')?.valueChanges
+    .subscribe(roomtype=>{
+      const selectRoom=this.room.find(loc=>loc.roomtype===roomtype);
+      if (selectRoom) {
+        this.bookingForm.patchValue({ location: selectRoom });
+
+      }
+    });
+
+    this.bookingForm.get('room')?.get('roomid')?.valueChanges
+    .subscribe(roomid=>{
+      const selectRoom=this.room.find(loc=>loc.roomid===roomid);
+      if (selectRoom) {
+        this.bookingForm.patchValue({ room: selectRoom });
+
+      }
+    });
+    this.bookingForm.get('room')?.get('price')?.valueChanges
+    .subscribe(price=>{
+      const selectRoom=this.room.find(loc=>loc.price===price);
+      if (selectRoom) {
+        this.bookingForm.patchValue({ room: selectRoom });
+
+      }
+    })
+
   }
+  
 
   loaduser() {
     this.userService.getAllUserForView()
@@ -107,14 +143,17 @@ export class CreatebookingComponent implements OnInit {
       })
 
   }
-  createBooking() {
-    this.bookings.user = this.bookingForm.get('user')?.value; // Corrected this line
-    this.bookings.room = this.bookingForm.get('room')?.value; // Get the room data
-    this.bookings.location = this.bookingForm.get('location')?.value; // Get the location data
-    this.bookings.checkindate = this.bookingForm.get('checkindate')?.value;
-    this.bookings.checkoutdate = this.bookingForm.get('checkoutdate')?.value;
-    // this.bookings.price = this.bookingForm.get('room')?.get('price')?.value;
   
+  createBooking() {
+    this.bookings.user = this.bookingForm.value.user;
+    this.bookings.location= this.bookingForm.value.location;
+    this.bookings.room= this.bookingForm.value.room;
+   
+    this.bookings.room= this.bookingForm.value.room;
+    this.bookings.checkindate = this.bookingForm.value.checkindate;
+    this.bookings.checkoutdate = this.bookingForm.value.checkoutdate;
+    this.bookings.room= this.bookingForm.value.room;
+ 
     this.bookingService.createbooking(this.bookings)
       .subscribe({
         next: res => {

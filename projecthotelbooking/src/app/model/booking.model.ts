@@ -34,7 +34,7 @@
         Sreemangal: string|undefined
         Kuakata: string|undefined
       }
-    price: any;
+   
 
      
   }

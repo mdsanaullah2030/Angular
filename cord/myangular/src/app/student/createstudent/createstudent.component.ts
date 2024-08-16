@@ -60,6 +60,7 @@ export class CreatestudentComponent implements OnInit {
         }
 
       });
+      
 
 
   }
@@ -82,7 +83,7 @@ export class CreatestudentComponent implements OnInit {
 
   createStudent() {
 
-    this.student.name = this.studentForm.value.name;
+    this.student.name= this.studentForm.value.name;
     this.student.email = this.studentForm.value.email;
     this.student.cellNo = this.studentForm.value.cellNo;
     this.student.location = this.studentForm.value.location;

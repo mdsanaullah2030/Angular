@@ -85,8 +85,48 @@ export class CreatebookingComponent implements OnInit {
 
 
     });
-    this.bookingForm.get('user')?.get('name')?.valueChanges
+    this.bookingForm.get('user')?.get('userid')?.valueChanges
+    .subscribe(userid => {
+      const selectedUser = this.user.find(user => user.userid === userid);
+      if (selectedUser) {
+        this.bookingForm.get('user')?.patchValue(selectedUser);
+      }
+    });
   }
 
-}
+  loaduser() {
+    this.userService.getAllUserForView()
+      .subscribe({
+        next: res => {
+          this.user = res;
+        },
+        error: error => {
+          console.log(error);
 
+        }
+      })
+
+  }
+  createBooking() {
+    this.bookings.user = this.bookingForm.get('user')?.value; // Corrected this line
+    this.bookings.room = this.bookingForm.get('room')?.value; // Get the room data
+    this.bookings.location = this.bookingForm.get('location')?.value; // Get the location data
+    this.bookings.checkindate = this.bookingForm.get('checkindate')?.value;
+    this.bookings.checkoutdate = this.bookingForm.get('checkoutdate')?.value;
+    // this.bookings.price = this.bookingForm.get('room')?.get('price')?.value;
+  
+    this.bookingService.createbooking(this.bookings)
+      .subscribe({
+        next: res => {
+          this.loaduser(); // Load users after successful booking
+          this.bookingForm.reset(); // Reset the form
+          this.router.navigate(['bookingview']);
+        },
+        error: error => {
+          console.log(error);
+        }
+      });
+  }
+  
+
+}

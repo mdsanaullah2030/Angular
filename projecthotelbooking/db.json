@@ -118,7 +118,7 @@
           "price": 13123123,
           "status": "reef",
           "description": "adfasdfs",
-          "location":{
+          "location": {
             "id": "4355",
             "CoxsBazar": "Best Western Heritage",
             "Dhaka": "Amari Dhaka Bangladesh",
@@ -129,8 +129,35 @@
           }
         }
       }
+    },
+    {
+      "id": "145a",
+      "user": {
+        "userid": null,
+        "name": null,
+        "email": null,
+        "nid": null,
+        "phonenumber": null
+      },
+      "room": {
+        "id": null,
+        "roomid": null,
+        "roomnumber": null,
+        "roomtype": null,
+        "price": null,
+        "status": null,
+        "description": null
+      },
+      "location": {
+        "id": null,
+        "CoxsBazar": null,
+        "Dhaka": null,
+        "Sylhet": null,
+        "Chittagong": null,
+        "Sreemangal": null,
+        "Kuakata": null
+      },
+      "checkindate": "2024-08-23"
     }
   ]
 }
-
-

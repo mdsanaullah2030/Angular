@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, throwError } from 'rxjs';
+import { catchError, forkJoin, Observable, throwError } from 'rxjs';
 import { BookingModel } from '../model/booking.model';
 import { UserModel } from '../model/user.model';
 import { RoomModel } from '../model/room.model';
@@ -23,12 +23,15 @@ export class BookingService {
 
   }
 
-  getAllLocationforBooking():Observable<UserModel[],RoomModel[],LocationModel[],BookingModel>{
-    return this.httpClient.get<Location[],RoomModel[],LocationModel[],BooleanConstructor[]>(this.baseUrl)
-      .pipe(
-        catchError(this.handleError)
-      )
-
+  getAllLocationforBooking(): Observable<{ users: UserModel[], rooms: RoomModel[], locations: LocationModel[], bookings: BookingModel[] }> {
+    return forkJoin({
+      users: this.httpClient.get<UserModel[]>(this.baseUrl + '/users'),
+      rooms: this.httpClient.get<RoomModel[]>(this.baseUrl + '/rooms'),
+      locations: this.httpClient.get<LocationModel[]>(this.baseUrl + '/locations'),
+      bookings: this.httpClient.get<BookingModel[]>(this.baseUrl + '/bookings')
+    }).pipe(
+      catchError(this.handleError)
+    );
   }
 
   private handleError(error: any) {

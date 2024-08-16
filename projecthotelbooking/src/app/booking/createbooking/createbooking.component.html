@@ -1,9 +1,71 @@
 
-userid
-CoxsBazar
-roomtype
-  roomid
+<div class="container">
+  <h1 class="text-center">Student Add Form</h1>
 
-  checkindate!: Date;
-    checkoutdate!: Date;
-    price
+
+  <form [formGroup]="bookingForm" (ngSubmit)="createBooking()">
+
+    <div class="mb-3" formGroupName="userid">
+      <div class="invalid-feedback">Please select a location.</div>
+      <label for="userid" class="form-label">userid:</label>
+      <select id="userid" formControlName="name" class="form-select" required>
+        <option value="" disabled selected>Select your location</option>
+        <option *ngFor="let loc of user" [ngValue]="loc.userid">{{loc.userid}}</option>
+      </select>
+    </div>
+
+
+    <div class="mb-3" formGroupName="CoxsBazar">
+      <div class="invalid-feedback">Please select a CoxsBazar.</div>
+      <label for="CoxsBazar" class="form-label">CoxsBazar:</label>
+      <select id="CoxsBazar" formControlName="name" class="form-select" required>
+        <option value="" disabled selected>Select your CoxsBazar</option>
+        <option *ngFor="let loc of location" [ngValue]="loc.CoxsBazar">{{loc.CoxsBazar}}</option>
+      </select>
+    </div>
+
+
+    <div class="mb-3" formGroupName="roomtype">
+      <div class="invalid-feedback">Please select a roomtype.</div>
+      <label for="roomtype" class="form-label">roomtype:</label>
+      <select id="roomtype" formControlName="name" class="form-select" required>
+        <option value="" disabled selected>Select your roomtype</option>
+        <option *ngFor="let loc of room" [ngValue]="loc.roomtype">{{loc.roomtype}}</option>
+      </select>
+    </div>
+
+
+
+    <div class="mb-3" formGroupName="roomid">
+      <div class="invalid-feedback">Please select a roomid.</div>
+      <label for="roomid" class="form-label">roomid:</label>
+      <select id="roomid" formControlName="name" class="form-select" required>
+        <option value="" disabled selected>Select your roomid</option>
+        <option *ngFor="let loc of room" [ngValue]="loc.roomid">{{loc.roomid}}</option>
+      </select>
+    </div>
+
+
+    <div class="mb-3">
+      <label for="checkindate" class="form-label">checkindate</label>
+      <input id="checkindate" type="date" class="form-control" formControlName="checkindate" placeholder="Enter your cell number">
+    </div>
+    <div class="mb-3">
+      <label for="checkoutdate" class="form-label">checkoutdate</label>
+      <input id="checkoutdate" type="date" class="form-control" formControlName="checkoutdate" placeholder="Enter your cell number">
+    </div>
+
+    <!-- <div class="mb-3" formGroupName="price">
+      <div class="invalid-feedback">Please select a price.</div>
+      <label for="price" class="form-label">Location:</label>
+      <select id="price" formControlName="name" class="form-select" required>
+        <option value="" disabled selected>Select your price</option>
+        <option *ngFor="let loc of price" [ngValue]="loc.price">{{loc.price}}</option>
+      </select>
+    </div> -->
+
+   
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

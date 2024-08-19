@@ -23,6 +23,7 @@ import { UpdatelocationComponent } from './location/updatelocation/updatelocatio
 import { ViewhotelComponent } from './hotelList/viewhotel/viewhotel.component';
 import { CreatehotelComponent } from './hotelList/createhotel/createhotel.component';
 import { UpdatehotelComponent } from './hotelList/updatehotel/updatehotel.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { UpdatehotelComponent } from './hotelList/updatehotel/updatehotel.compon
     UpdatelocationComponent,
     ViewhotelComponent,
     CreatehotelComponent,
-    UpdatehotelComponent
+    UpdatehotelComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

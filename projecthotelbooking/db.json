@@ -49,6 +49,14 @@
       "email": "asaa@gmail.com",
       "nid": 1234,
       "phonenumber": "12131234"
+    },
+    {
+      "id": "eb28",
+      "userid": "",
+      "name": "",
+      "email": "",
+      "nid": "",
+      "phonenumber": ""
     }
   ],
   "room": [
@@ -75,7 +83,7 @@
       "roomid": "22",
       "roomnumber": 555,
       "roomtype": "Double Room",
-      "status": "Checked-in",
+      "status": "Confirmed",
       "description": "eer"
     },
     {
@@ -91,10 +99,10 @@
       "id": "c67a",
       "roomid": "666",
       "roomnumber": 555,
-      "roomtype": "Double Room",
+      "roomtype": "Family Room",
       "status": "Confirmed",
       "description": "sss",
-      "price": 7000
+      "price": 12000
     }
   ],
   "booking": [

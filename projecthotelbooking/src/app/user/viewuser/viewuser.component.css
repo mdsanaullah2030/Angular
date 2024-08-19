@@ -1,0 +1,137 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table thead {
+    background-color: #530e02;
+    color: white;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table ul {
+    padding-left: 20px;
+}
+
+.table ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #752005;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:active {
+    background-color: #1e7e34;
+}
+
+button[click="deleteSales(sale.id)"] {
+    background-color: #07a54e;
+}
+
+button[click="deleteSales(sale.id)"]:hover {
+    background-color: #c82333;
+}
+
+button[click="deleteSales(sale.id)"]:active {
+    background-color: #ec2727;
+}
+/* Delete button color red */
+button {
+    background-color: rgb(4, 52, 124);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Table row hover dancing effect */
+table tbody tr:hover {
+    animation: dance 0.5s infinite alternate;
+}
+
+@keyframes dance {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+/* Edit button color green */
+button.edit-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.edit-button:hover {
+    opacity: 0.8;
+}
+
+/* Delete button color red */
+button.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.delete-button:hover {
+    opacity: 0.8;
+}
+
+/* Table row hover dancing effect */
+table tbody tr:hover {
+    animation: dance 0.5s infinite alternate;
+}
+
+@keyframes dance {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+

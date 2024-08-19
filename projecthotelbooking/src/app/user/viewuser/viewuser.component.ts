@@ -40,4 +40,9 @@ error: error => {
 updateUser(id:string){
   this.router.navigate(['update',id])
 }
+
+createuser(){
+  this.router.navigate(['create'])
+
+}
 }

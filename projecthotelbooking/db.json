@@ -1,22 +1,8 @@
 {
   "location": [
     {
-      "id": "32d6",
-      "CoxsBazar": "Best Western Heritage",
-      "Dhaka": "The Westin Dhaka",
-      "Sylhet": "Grand Sylhet Hotel & Resort",
-      "Chittagong": "Well Park Residence Boutique Hotel",
-      "Sreemangal": "Balishira Resort Ltd",
-      "Kuakata": "Sikder Resort & Villas"
-    },
-    {
-      "id": "101c",
-      "CoxsBazar": "Best Western Heritage",
-      "Dhaka": "Amari Dhaka Bangladesh",
-      "Sylhet": "Grand Sylhet Hotel & Resort",
-      "Chittagong": "The Peninsula Chittagong",
-      "Sreemangal": "Balishira Resort Ltd",
-      "Kuakata": "Sikder Resort & Villas"
+      "id": "1",
+      "name": "Sanaullah"
     }
   ],
   "Registration": [
@@ -49,14 +35,6 @@
       "email": "asaa@gmail.com",
       "nid": 1234,
       "phonenumber": "12131234"
-    },
-    {
-      "id": "eb28",
-      "userid": "",
-      "name": "",
-      "email": "",
-      "nid": "",
-      "phonenumber": ""
     }
   ],
   "room": [
@@ -136,34 +114,6 @@
             "Kuakata": "Sikder Resort & Villas"
           }
         }
-      }
-    },
-    {
-      "id": "145a",
-      "user": {
-        "userid": null,
-        "name": null,
-        "email": null,
-        "nid": null,
-        "phonenumber": null
-      },
-      "room": {
-        "id": null,
-        "roomid": null,
-        "roomnumber": null,
-        "roomtype": null,
-        "price": null,
-        "status": null,
-        "description": null
-      },
-      "location": {
-        "id": null,
-        "CoxsBazar": null,
-        "Dhaka": null,
-        "Sylhet": null,
-        "Chittagong": null,
-        "Sreemangal": null,
-        "Kuakata": null
       }
     }
   ]

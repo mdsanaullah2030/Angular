@@ -7,9 +7,6 @@ import { LocationModel } from '../model/location .model';
   providedIn: 'root'
 })
 export class LocationService {
-  getAllLocations() {
-    throw new Error('Method not implemented.');
-  }
   baseUrl: string ="http://localhost:3000/location"
   constructor(
     private httpClinte:HttpClient
@@ -39,6 +36,11 @@ export class LocationService {
 
     return this.httpClinte.get(this.baseUrl + "/" + id);
 
+  }
+
+  
+  getAllLocations() {
+    return this.httpClinte.get<LocationModel[]>(this.baseUrl);
   }
 
 

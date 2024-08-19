@@ -11,7 +11,7 @@
             <label for="user" class="form-label">User ID:</label>
             <select id="user" formControlName="userid" class="form-select" required>
               <option value="" disabled selected>Select your user ID</option>
-              <option *ngFor="let loc of user" [ngValue]="loc.userid">{{loc.userid}}</option>
+              <option *ngFor="let u of user" [ngValue]="u.userid">{{u.name}}</option>
             </select>
             <div class="invalid-feedback">Please select a user ID.</div>
           </div>
@@ -38,18 +38,9 @@
             <label for="roomtype" class="form-label">Room Type:</label>
             <select id="roomtype" formControlName="roomtype" class="form-select" required>
               <option value="" disabled selected>Select your room type</option>
-              <option *ngFor="let loc of room" [ngValue]="loc.roomtype">{{loc.roomtype}}</option>
+              <option *ngFor="let r of room" [ngValue]="r.roomtype">{{r.roomtype}}</option>
             </select>
             <div class="invalid-feedback">Please select a room type.</div>
-          </div>
-
-          <div class="col-md-6">
-            <label for="roomid" class="form-label">Room ID:</label>
-            <select id="roomid" formControlName="roomid" class="form-select" required>
-              <option value="" disabled selected>Select your room ID</option>
-              <option *ngFor="let loc of room" [ngValue]="loc.roomid">{{loc.roomid}}</option>
-            </select>
-            <div class="invalid-feedback">Please select a room ID.</div>
           </div>
         </div>
 

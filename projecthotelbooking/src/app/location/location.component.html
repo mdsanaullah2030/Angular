@@ -19,25 +19,17 @@
           <table class="table table-striped table-bordered">
               <thead class="thead-dark">
                   <tr>
-                      <th>Cox's Bazar</th>
-                      <th>Dhaka</th>
-                      <th>Sylhet</th>
-                      <th>Chittagong</th>
-                      <th>Sreemangal</th>
-                      <th>Kuakata</th>
-                      <th>Update</th>
-                      <th>Delete</th>
+                      <th>ID</th>
+                      <th>Name</th>
+                      
 
                   </tr>
               </thead>
               <tbody>
                   <tr *ngFor="let Room of location | async">
-                      <td>{{ Room.CoxsBazar}}</td>
-                      <td>{{ Room.Dhaka }}</td>
-                      <td>{{ Room.Sylhet }}</td>
-                      <td>{{ Room.Chittagong }}</td>
-                      <td>{{ Room.Sreemangal }}</td>
-                      <td>{{ Room.Kuakata }}</td>
+                      <td>{{ Room.id}}</td>
+                      <td>{{ Room.name }}</td>
+                    
                      
                       <td>
                           <button class="btn btn-warning btn-m-2 p-1" (click)="updateLocation(Room.id)">Edit</button>

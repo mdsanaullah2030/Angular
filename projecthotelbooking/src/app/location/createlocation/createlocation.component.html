@@ -1,70 +1,26 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-header text-center">
-          <h4>Create Location</h4>
-        </div>
-        <div class="card-body">
-          <form [formGroup]="formValue">
-            <div class="mb-3">
-              <label for="CoxsBazar" class="form-label">Cox's Bazar</label>
-              <select class="form-select" id="CoxsBazar" formControlName="CoxsBazar" required>
-                <option *ngFor="let option of CoxsBazar" [value]="option.value">
-                  {{ option.label }}
-                </option>
-              </select>
-            </div>
+      <div class="col-md-6">
+          <div class="card">
+              <div class="card-header text-center">
+                  <h4>Create User</h4>
+              </div>
+              <div class="card-body">
+                  <form [formGroup]="formValue">
 
-            <div class="mb-3">
-              <label for="Dhaka" class="form-label">Dhaka</label>
-              <select class="form-select" id="Dhaka" formControlName="Dhaka" required>
-                <option *ngFor="let option of Dhaka" [value]="option.value">
-                  {{ option.label }}
-                </option>
-              </select>
-            </div>
+                      <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Name</label>
+                          <input type="text" class="form-control" formControlName="name">
 
-            <div class="mb-3">
-              <label for="Sylhet" class="form-label">Sylhet</label>
-              <select class="form-select" id="Sylhet" formControlName="Sylhet" required>
-                <option *ngFor="let option of Sylhet" [value]="option.value">
-                  {{ option.label }}
-                </option>
-              </select>
-            </div>
+                      </div>
 
-            <div class="mb-3">
-              <label for="Chittagong" class="form-label">Chittagong</label>
-              <select class="form-select" id="Chittagong" formControlName="Chittagong" required>
-                <option *ngFor="let option of Chittagong" [value]="option.value">
-                  {{ option.label }}
-                </option>
-              </select>
-            </div>
 
-            <div class="mb-3">
-              <label for="Sreemangal" class="form-label">Sreemangal</label>
-              <select class="form-select" id="Sreemangal" formControlName="Sreemangal" required>
-                <option *ngFor="let option of Sreemangal" [value]="option.value">
-                  {{ option.label }}
-                </option>
-              </select>
-            </div>
 
-            <div class="mb-3">
-              <label for="Kuakata" class="form-label">Kuakata</label>
-              <select class="form-select" id="Kuakata" formControlName="Kuakata" required>
-                <option *ngFor="let option of Kuakata" [value]="option.value">
-                  {{ option.label }}
-                </option>
-              </select>
-            </div>
+                      <button type="submit" class="btn btn-primary" (click)=" createLocation()">Submit</button>
+                  </form>
 
-            <button type="submit" class="btn btn-primary w-100" (click)="createLocation()">Submit</button>
-          </form>
-        </div>
+              </div>
+          </div>
       </div>
-    </div>
   </div>
 </div>

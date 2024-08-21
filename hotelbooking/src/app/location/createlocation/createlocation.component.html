@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="text-center">Location Add Form</h1>
+    <form [formGroup]="formValue">
+
+        <div class="mb-3">
+            <label for="locationname" class="form-label">locationname</label>
+            <input type="text" class="form-control" id="locationname" formControlName="locationname" placeholder="Enter location name">
+        </div>
+
+       
+        <button type="submit" class="btn btn-outline-success" (click)="createLocation()">Submit</button>
+    </form>
+</div>

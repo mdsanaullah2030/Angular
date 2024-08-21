@@ -1,14 +1,13 @@
 {
-<<<<<<< HEAD
-  "location": [],
-=======
+
+  
+
   "location": [
     {
       "id": "1",
       "name": "Sanaullah"
     }
   ],
->>>>>>> 21e8128d5528a0f3327bc228d15e3b59027ad6e2
   "Registration": [
     {
       "id": "1",
@@ -23,24 +22,7 @@
       "password": "123456789"
     }
   ],
-  "User": [
-    {
-      "userid": "1001",
-      "name": "Sanaullah",
-      "email": "Sanaullah@gmail.com",
-      "nid": "34455",
-      "phonenumber": "57898900",
-      "id": "0479"
-    },
-    {
-      "id": "5e51",
-      "userid": "11",
-      "name": "asas",
-      "email": "asaa@gmail.com",
-      "nid": 1234,
-      "phonenumber": "12131234"
-    }
-  ],
+ 
   "room": [
     {
       "id": "c71b",
@@ -86,39 +68,6 @@
       "description": "sss",
       "price": 12000
     }
-  ],
-  "booking": [
-    {
-      "id": "1",
-      "bookingid": 34,
-      "checkindate": "2024-07-28",
-      "checkoutdate": "2024-07-30",
-      "bookingdate": "2020-07-25",
-      "user": {
-        "userid": "13213",
-        "name": "sdsns",
-        "email": "adad@gmail.com",
-        "nid": "34455",
-        "phonenumber": "57898900",
-        "room": {
-          "id": "4355",
-          "roomid": "123",
-          "roomnumber": 42342,
-          "roomtype": "ac",
-          "price": 13123123,
-          "status": "reef",
-          "description": "adfasdfs",
-          "location": {
-            "id": "4355",
-            "CoxsBazar": "Best Western Heritage",
-            "Dhaka": "Amari Dhaka Bangladesh",
-            "Sylhet": "Grand Sylhet Hotel & Resort",
-            "Chittagong": "The Peninsula Chittagong",
-            "Sreemangal": "Balishira Resort Ltd",
-            "Kuakata": "Sikder Resort & Villas"
-          }
-        }
-      }
-    }
   ]
+  
 }

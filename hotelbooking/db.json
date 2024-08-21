@@ -1,0 +1,66 @@
+{
+  "location": [
+    {
+      "id": "1",
+      "locationname": "Sanaullah"
+    },
+    {
+      "id": "f1d6",
+      "locationname": "sfdsadf"
+    },
+    {
+      "id": "f8a1",
+      "locationname": "sss"
+    }
+  ],
+  "hotel": [
+    {
+      "id": "b4fb",
+      "hotelname": "Shabab ahmed Skip",
+      "locations": {
+        "id": "55b3",
+        "locationname": "Azimpur"
+      }
+    },
+    {
+      "id": "da49",
+      "hotelname": "ssdfds",
+      "location": {
+        "id": null,
+        "locationname": null
+      }
+    },
+    {
+      "id": "ce17",
+      "hotelname": "teeee",
+      "location": {
+        "id": null,
+        "locationname": null
+      }
+    },
+    {
+      "id": "728d",
+      "hotelname": "dffter",
+      "location": {
+        "id": null,
+        "locationname": null
+      }
+    },
+    {
+      "id": "2bcf",
+      "hotelname": "dffter",
+      "location": {
+        "id": "f1d6",
+        "locationname": "sfdsadf"
+      }
+    },
+    {
+      "id": "5c0f",
+      "hotelname": "fgf",
+      "location": {
+        "id": "1",
+        "locationname": "Sanaullah"
+      }
+    }
+  ]
+}

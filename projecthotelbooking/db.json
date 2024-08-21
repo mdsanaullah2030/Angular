@@ -1,24 +1,5 @@
 {
-  "location": [
-    {
-      "id": "32d6",
-      "CoxsBazar": "Best Western Heritage",
-      "Dhaka": "The Westin Dhaka",
-      "Sylhet": "Grand Sylhet Hotel & Resort",
-      "Chittagong": "Well Park Residence Boutique Hotel",
-      "Sreemangal": "Balishira Resort Ltd",
-      "Kuakata": "Sikder Resort & Villas"
-    },
-    {
-      "id": "101c",
-      "CoxsBazar": "Best Western Heritage",
-      "Dhaka": "Amari Dhaka Bangladesh",
-      "Sylhet": "Grand Sylhet Hotel & Resort",
-      "Chittagong": "The Peninsula Chittagong",
-      "Sreemangal": "Balishira Resort Ltd",
-      "Kuakata": "Sikder Resort & Villas"
-    }
-  ],
+  "location": [],
   "Registration": [
     {
       "id": "1",

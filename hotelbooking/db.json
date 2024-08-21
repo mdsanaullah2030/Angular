@@ -23,17 +23,38 @@
       }
     },
     {
+<<<<<<< HEAD
       "id": "3727",
       "hotelname": "PIZZA",
+=======
+      "id": "deea",
+      "hotelname": "dfsdf",
+>>>>>>> fd2a59564307d3dc27264dd204491a9354b1e220
       "location": {
         "locationname": "Sanaullah"
       }
     },
     {
+<<<<<<< HEAD
       "id": "5e08",
       "hotelname": "TEST",
       "location": {
         "locationname": "Sanaullah"
+=======
+      "id": "4017",
+      "hotelname": "rte",
+      "location": {
+        "id": null,
+        "locationname": null
+      }
+    },
+    {
+      "id": "367a",
+      "hotelname": "dfsdf",
+      "location": {
+        "id": null,
+        "locationname": null
+>>>>>>> fd2a59564307d3dc27264dd204491a9354b1e220
       }
     }
   ]

@@ -1,1 +1,22 @@
-<p>updatehotel works!</p>
+<div class="container">
+
+    <h2>Update Student Details</h2>
+    
+    <form [formGroup]="hotelForm" (ngSubmit)="updateHotel()">
+        <div class="mb-3">
+            <label for="hotelname" class="form-label">Hotel Name</label>
+            <input type="text" class="form-control" id="hotelname" formControlName="hotelname">
+        </div>
+
+       
+
+        <div class="mb-3">
+            <label for="location" class="form-label">Location Name:</label>
+            <select id="location" formControlName="location" class="form-select">
+                <option *ngFor="let loc of location" [ngValue]="loc">{{ loc.locationname }}</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update Hotel</button>
+    </form>
+</div>

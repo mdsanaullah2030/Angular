@@ -25,13 +25,13 @@
             <tbody>
                 <tr *ngFor="let st of hotels | async">
                     <td>{{ st.hotelname }}</td>
-                    <td>{{ st.locations.locationname }}</td>
+                    <td>{{ st.location.locationname }}</td>
 
                     <td>
-                        <button class="btn btn-warning btn-m- p-1" > Edit </button>
+                        <button class="btn btn-warning btn-m- p-1" (click)="editHotel(hotels.id)"> Edit </button>
                     </td>
                     <td>
-                        <button class="btn btn-danger btn- m-2 p-1" >Delete</button>
+                        <button class="btn btn-danger btn- m-2 p-1" (click)="deleteStudent(hotels.id)" >Delete</button>
                     </td>
                 </tr>
             </tbody>

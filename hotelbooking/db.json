@@ -17,48 +17,22 @@
     {
       "id": "b4fb",
       "hotelname": "Shabab ahmed Skip",
-      "locations": {
+      "location": {
         "id": "55b3",
         "locationname": "Azimpur"
       }
     },
     {
-      "id": "da49",
-      "hotelname": "ssdfds",
+      "id": "3727",
+      "hotelname": "PIZZA",
       "location": {
-        "id": null,
-        "locationname": null
+        "locationname": "Sanaullah"
       }
     },
     {
-      "id": "ce17",
-      "hotelname": "teeee",
+      "id": "5e08",
+      "hotelname": "TEST",
       "location": {
-        "id": null,
-        "locationname": null
-      }
-    },
-    {
-      "id": "728d",
-      "hotelname": "dffter",
-      "location": {
-        "id": null,
-        "locationname": null
-      }
-    },
-    {
-      "id": "2bcf",
-      "hotelname": "dffter",
-      "location": {
-        "id": "f1d6",
-        "locationname": "sfdsadf"
-      }
-    },
-    {
-      "id": "5c0f",
-      "hotelname": "fgf",
-      "location": {
-        "id": "1",
         "locationname": "Sanaullah"
       }
     }

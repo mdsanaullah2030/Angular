@@ -13,8 +13,9 @@ import { Router } from '@angular/router';
 })
 export class CreatehotelComponent implements OnInit {
 
-  location: LocationModel[] = [];
-  hotelForm!: FormGroup; // Corrected `holetForm` to `hotelForm`
+  locations: LocationModel[] = [];
+  hotels: HotelModel[] = [];
+  hotelForm!: FormGroup;
   hotel: HotelModel = new HotelModel();
 
   constructor(
@@ -30,18 +31,15 @@ export class CreatehotelComponent implements OnInit {
     this.hotelForm = this.formBuilder.group({
       hotelname: [''],
       location: this.formBuilder.group({
-        id: [undefined],
-        locationname: [undefined],
+        locationname: [''],
       }),
-    });
+    })
 
-    this.hotelForm.get('location')?.get('locationname')?.valueChanges.subscribe(locationname => {
-      const selectedLocation = this.location.find(loc => loc.locationname === locationname);
+    this.hotelForm.get('location')?.get('locationname')?.valueChanges
+    .subscribe(locationname => {
+      const selectedLocation = this.locations.find(loc => loc.locationname === locationname);
       if (selectedLocation) {
-        this.hotelForm.get('location')?.patchValue({
-          id: selectedLocation.id,
-          locationname: selectedLocation.locationname
-        });
+        this.hotelForm.patchValue({location:selectedLocation});
       }
     });
   }
@@ -49,7 +47,7 @@ export class CreatehotelComponent implements OnInit {
   loadLocation() {
     this.locationService.getAllLocationforHotel().subscribe({
       next: res => {
-        this.location = res;
+        this.locations = res;
       },
       error: error => {
         console.log(error);

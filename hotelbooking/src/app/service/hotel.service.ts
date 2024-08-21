@@ -16,8 +16,23 @@ export class HotelService {
 
   }
 
-  createHotel(hotels: HotelModel): Observable<HotelModel> {
-    return this.http.post<HotelModel>(this.baseUrl, hotels)
+  createHotel(hotel: HotelModel): Observable<HotelModel> {
+    return this.http.post<HotelModel>(`${this.baseUrl}`, hotel);
+  }
+  deleteHotel(id: string): Observable<any> {
+    return this.http.delete(this.baseUrl + id);
 
   }
+
+  updateHotel(hotel: HotelModel): Observable<HotelModel> {
+    console.log(hotel);
+    return this.http.put<HotelModel>(this.baseUrl + hotel.id, hotel);
+
+  }
+
+  getByHoteluId(hoteleId: string): Observable<HotelModel> {
+    return this.http.get<HotelModel>(this.baseUrl + hoteleId);
+
+  }
+
 }

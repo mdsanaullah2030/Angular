@@ -3,9 +3,8 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ViewuserComponent } from './user/viewuser/viewuser.component';
-import { CreateuserComponent } from './user/createuser/createuser.component';
-import { UpdateuserComponent } from './user/updateuser/updateuser.component';
+
+
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -14,7 +13,7 @@ import { RoomupdateComponent } from './room/roomupdate/roomupdate.component';
 import { CreateroomComponent } from './room/createroom/createroom.component';
 import { ViewbookingComponent } from './booking/viewbooking/viewbooking.component';
 import { UpdatebookingComponent } from './booking/updatebooking/updatebooking.component';
-import { CreatebookingComponent } from './booking/createbooking/createbooking.component';
+
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LocationComponent } from './location/location.component';
@@ -28,16 +27,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ViewuserComponent,
-    CreateuserComponent,
-    UpdateuserComponent,
 
     RoomviewComponent,
     RoomupdateComponent,
     CreateroomComponent,
     ViewbookingComponent,
     UpdatebookingComponent,
-    CreatebookingComponent,
+   
     LoginComponent,
     RegistrationComponent,
     LocationComponent,

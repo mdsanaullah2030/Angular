@@ -5,13 +5,15 @@ import { CreatelocationComponent } from './location/createlocation/createlocatio
 import { UpdatelocationComponent } from './location/updatelocation/updatelocation.component';
 import { ViewhotelComponent } from './hotel/viewhotel/viewhotel.component';
 import { CreatehotelComponent } from './hotel/createhotel/createhotel.component';
+import { UpdatehotelComponent } from './hotel/updatehotel/updatehotel.component';
 
 const routes: Routes = [
   {path:'view',component:ViewlocationComponent},
   {path:'create',component:CreatelocationComponent},
   {path:'updateLocation/:id',component:UpdatelocationComponent},
   {path:'hotelview',component:ViewhotelComponent},
-  {path:'createHotel',component:CreatehotelComponent}
+  {path:'createHotel',component:CreatehotelComponent},
+  {path:'updateHotel/:id',component:UpdatehotelComponent}
 ];
 
 @NgModule({
@@ -19,3 +21,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+

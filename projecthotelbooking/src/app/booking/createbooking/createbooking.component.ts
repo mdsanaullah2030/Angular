@@ -39,6 +39,10 @@ export class CreatebookingComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.loaduser();
+    this.loadLocations();
+    this.loadRooms();
+
     this.bookingForm = this.formBuilder.group({
 
       checkindate: [''],
@@ -141,7 +145,32 @@ export class CreatebookingComponent implements OnInit {
 
         }
       })
+  }
 
+  loadLocations() {
+    this.locatoinService.getAllLocations()
+      .subscribe({
+        next: res => {
+          this.location = res;
+        },
+        error: error => {
+          console.log(error);
+
+        }
+      })
+  }
+
+  loadRooms() {
+    this.roomService.getAllRoom()
+      .subscribe({
+        next: res => {
+          this.room = res;
+        },
+        error: error => {
+          console.log(error);
+
+        }
+      })
   }
 
   createBooking() {

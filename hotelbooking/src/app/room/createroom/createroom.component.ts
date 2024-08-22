@@ -52,7 +52,7 @@ constructor(
   }
 
   loadHotel() {
-    this.hotelService.getAllStudentforRoom().subscribe({
+    this.hotelService.getAllHotelforRoom().subscribe({
       next: res => {
         this.hotels = res;
       },

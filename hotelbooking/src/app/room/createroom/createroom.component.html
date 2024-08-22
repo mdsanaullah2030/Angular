@@ -1,0 +1,37 @@
+<div class="container">
+    <h1 class="text-center">Create Hotel</h1>
+    <form [formGroup]="roomForm" (ngSubmit)="createRoom()">
+        <div class="mb-3">
+            <label for="room" class="form-label">Room Type</label>
+            <input id="roomType" type="text" class="form-control" formControlName="roomType" placeholder="Enter hotel name">
+        </div>
+
+        <div class="mb-3">
+            <label for="room" class="form-label">Adults</label>
+            <input id="adults" type="number" class="form-control" formControlName="adults" placeholder="Enter hotel name">
+        </div>
+
+        <div class="mb-3">
+            <label for="room" class="form-label">Children</label>
+            <input id="children" type="number" class="form-control" formControlName="children" placeholder="Enter hotel name">
+        </div>
+
+
+        <div class="mb-3">
+            <label for="room" class="form-label">Price</label>
+            <input id="price" type="number" class="form-control" formControlName="price" placeholder="Enter hotel name">
+        </div>
+
+        <div class="mb-3" formGroupName="hotel">
+            <label for="hotel" class="form-label">Hotel Name:</label>
+            <select id="hotel" formControlName="hotelname" class="form-select" required>
+                <option value="" disabled selected>Select your location</option>
+                <option *ngFor="let loc of hotels" [ngValue]="loc.hotelname">{{loc.hotelname}}</option>
+
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+

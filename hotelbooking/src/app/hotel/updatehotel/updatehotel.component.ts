@@ -11,89 +11,74 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './updatehotel.component.html',
   styleUrl: './updatehotel.component.css'
 })
-export class UpdatehotelComponent implements OnInit{
-hotel:HotelModel=new HotelModel();
-location:LocationModel[]=[];
-hoteleId:string="";
-hotelForm!:FormGroup;
+export class UpdatehotelComponent implements OnInit {
+  hotel: HotelModel = new HotelModel();
+  locations: LocationModel[] = [];
+  hoteleId: string = "";
+  hotelForm!: FormGroup;
 
-constructor(
-  private locationService: LocationService,
-  private hotelService: HotelService,
-  private fromBuilder: FormBuilder,
-  private router: Router,
-  private route: ActivatedRoute
-) { }
+  constructor(
+    private locationService: LocationService,
+    private hotelService: HotelService,
+    private formBuilder: FormBuilder, 
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
+
   ngOnInit(): void {
     this.hoteleId = this.route.snapshot.params['id'];
-    console.log(this.hoteleId);
-    this.hotelForm=this.fromBuilder.group({ 
+    this.hotelForm = this.formBuilder.group({
+      hotelname: [''],
+      location: this.formBuilder.group({
+        id: [undefined],
+        locationname: [undefined]
+      })
+    });
 
-    hotelname:[''],
-    location:this.fromBuilder.group({
-
-id:[undefined],
-locationname:[undefined]
-    })
-  })
-  this.loadLocation();
-  this.loadHotelDetails();
+    this.loadLocation();
+    this.loadHotelDetails();
   }
 
   loadLocation(): void {
-    this.locationService.getAllLocationforHotel()
-      .subscribe({
-        next: (res: LocationModel[]) => {
-          this.location = res;
-
-        },
-
-        error: er => {
-          console.log(er);
-
-        }
-      });
-
+    this.locationService.getAllLocationforHotel().subscribe({
+      next: (res: LocationModel[]) => {
+        this.locations = res;
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    });
   }
+
   loadHotelDetails(): void {
-    this.hotelService.getByHoteluId(this.hoteleId)
-      .subscribe({
-        next: (hotel: HotelModel) => {
-          this.hotel = this.hotel;
-          this.hotelForm.patchValue({
-            hotelnamee: hotel.hotelname,
-           
-            location: hotel.location
-          });
-        },
-
-        error: error => {
-          console.log(error);
-        }
-      });
+    this.hotelService.getByHoteluId(this.hoteleId).subscribe({
+      next: (hotel: HotelModel) => {
+        this.hotel = hotel;
+        this.hotelForm.patchValue({
+          hotelname: hotel.hotelname,
+          location: hotel.location
+        });
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    });
   }
-  updateHotel(): void {
-    const updateHotel: HotelModel = {
 
+  updateHotel(): void {
+    const updatedHotel: HotelModel = {
       ...this.hotel,
       ...this.hotelForm.value
-
     };
 
-    this.hotelService.updateHotel(updateHotel)
-      .subscribe({
-        next: res => {
-
-          console.log('hotel update successfully:', res);
-          this.hotelForm.reset();
-          this.router.navigate(['hotelview']);
-        },
-        error: error => {
-
-          console.log('Error updating hotel:', error);
-        }
-
-      });
-}
-
+    this.hotelService.updateHotel(updatedHotel).subscribe({
+      next: () => {
+        this.hotelForm.reset();
+        this.router.navigate(['/hotelview']);
+      },
+      error: (err) => {
+        console.error('Error updating hotel:', err);
+      }
+    });
+  }
 }

@@ -11,6 +11,9 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { ViewhotelComponent } from './hotel/viewhotel/viewhotel.component';
 import { CreatehotelComponent } from './hotel/createhotel/createhotel.component';
 import { UpdatehotelComponent } from './hotel/updatehotel/updatehotel.component';
+import { ViewroomComponent } from './room/viewroom/viewroom.component';
+import { UpdateroomComponent } from './room/updateroom/updateroom.component';
+import { CreateroomComponent } from './room/createroom/createroom.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { UpdatehotelComponent } from './hotel/updatehotel/updatehotel.component'
     UpdatelocationComponent,
     ViewhotelComponent,
     CreatehotelComponent,
-    UpdatehotelComponent
+    UpdatehotelComponent,
+    ViewroomComponent,
+    UpdateroomComponent,
+    CreateroomComponent
   ],
   imports: [
     BrowserModule,

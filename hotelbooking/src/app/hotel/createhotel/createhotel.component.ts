@@ -31,6 +31,7 @@ export class CreatehotelComponent implements OnInit {
     this.hotelForm = this.formBuilder.group({
       hotelname: [''],
       location: this.formBuilder.group({
+        id:[''],
         locationname: [''],
       }),
     })

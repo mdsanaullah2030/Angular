@@ -6,9 +6,9 @@
             <input id="hotelname" type="text" class="form-control" formControlName="hotelname" placeholder="Enter hotel name">
         </div>
 
-        <div class="mb-3" formGroupName="locations">
-            <label for="locations" class="form-label">Location:</label>
-            <select id="locations" formControlName="locationname" class="form-select" required>
+        <div class="mb-3" formGroupName="location">
+            <label for="location" class="form-label">Location:</label>
+            <select id="location" formControlName="locationname" class="form-select" required>
                 <option value="" disabled selected>Select your location</option>
                 <option *ngFor="let loc of locations" [ngValue]="loc.locationname">{{loc.locationname}}</option>
             </select>

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { HotelModel } from '../model/hotel.model';
 
 @Injectable({
@@ -20,9 +20,9 @@ export class HotelService {
     return this.http.post<HotelModel>(`${this.baseUrl}`, hotel);
   }
   deleteHotel(id: string): Observable<any> {
-    return this.http.delete(this.baseUrl + id);
+    return this.http.delete(`${this.baseUrl}/${id}`);
+}
 
-  }
 
   updateHotel(hotel: HotelModel): Observable<HotelModel> {
     console.log(hotel);
@@ -34,5 +34,19 @@ export class HotelService {
     return this.http.get<HotelModel>(this.baseUrl + hoteleId);
 
   }
+
+  getAllStudentforRoom():Observable<HotelModel[]>{
+    return this.http.get<HotelModel[]>(this.baseUrl)
+      .pipe(
+        catchError(this.handleError)
+      )
+
+  }
+
+  private handleError(error: any) {
+    console.error('An error occurred:', error);
+    return throwError(() => new Error('test'));
+  }
+
 
 }

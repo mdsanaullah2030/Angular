@@ -2,15 +2,19 @@
   "location": [
     {
       "id": "1",
-      "locationname": "Sanaullah"
+      "locationname": "Dhaka"
     },
     {
       "id": "f1d6",
-      "locationname": "sfdsadf"
+      "locationname": "kuyakata"
     },
     {
-      "id": "f8a1",
-      "locationname": "sss"
+      "id": "3a39",
+      "locationname": "rajshahi"
+    },
+    {
+      "id": "00f0",
+      "locationname": "Chapinewbgong"
     }
   ],
   "hotel": [
@@ -23,38 +27,32 @@
       }
     },
     {
-<<<<<<< HEAD
-      "id": "3727",
-      "hotelname": "PIZZA",
-=======
-      "id": "deea",
-      "hotelname": "dfsdf",
->>>>>>> fd2a59564307d3dc27264dd204491a9354b1e220
+      "id": "3242",
+      "hotelname": "X-hotel",
       "location": {
-        "locationname": "Sanaullah"
+        "id": "3a39",
+        "locationname": "rajshahi"
       }
     },
     {
-<<<<<<< HEAD
-      "id": "5e08",
-      "hotelname": "TEST",
+      "id": "3aeb",
+      "hotelname": "Y-hotel",
       "location": {
-        "locationname": "Sanaullah"
-=======
-      "id": "4017",
-      "hotelname": "rte",
-      "location": {
-        "id": null,
-        "locationname": null
+        "id": "1",
+        "locationname": "Dhaka"
       }
-    },
+    }
+  ],
+  "room": [
     {
-      "id": "367a",
-      "hotelname": "dfsdf",
-      "location": {
-        "id": null,
-        "locationname": null
->>>>>>> fd2a59564307d3dc27264dd204491a9354b1e220
+      "id": "room1",
+      "roomType": "Deluxe Suite",
+      "adults": 2,
+      "children": 2,
+      "price": 200,
+      "hotel": {
+        "id": "hotel1",
+        "hotelname": "Grand Hotel"
       }
     }
   ]

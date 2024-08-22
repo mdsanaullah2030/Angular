@@ -54,6 +54,17 @@
         "id": "hotel1",
         "hotelname": "Grand Hotel"
       }
+    },
+    {
+      "id": "e9e1",
+      "roomType": "singel",
+      "adults": 5,
+      "children": 3,
+      "price": 555,
+      "hotel": {
+        "id": "3242",
+        "hotelname": "X-hotel"
+      }
     }
   ]
 }

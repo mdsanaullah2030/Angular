@@ -19,7 +19,7 @@ const routes: Routes = [
   {path:'updateHotel/:id',component:UpdatehotelComponent},
   {path:'roomview',component:ViewroomComponent},
   {path:'roomcreat',component:CreateroomComponent},
-  {path:'updateroom',component:UpdateroomComponent}
+  {path:'updateRoom/:id',component:UpdateroomComponent}
 ];
 
 @NgModule({

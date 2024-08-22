@@ -15,6 +15,10 @@
     {
       "id": "00f0",
       "locationname": "Chapinewbgong"
+    },
+    {
+      "id": "17d7",
+      "locationname": "Kansat"
     }
   ],
   "hotel": [
@@ -41,6 +45,14 @@
         "id": "00f0",
         "locationname": "Chapinewbgong"
       }
+    },
+    {
+      "id": "ad87",
+      "hotelname": "A-Hotel",
+      "location": {
+        "id": "1",
+        "locationname": "Dhaka"
+      }
     }
   ],
   "room": [
@@ -59,8 +71,8 @@
       "id": "e9e1",
       "roomType": "singel",
       "adults": 5,
-      "children": 3,
-      "price": 555,
+      "children": 6,
+      "price": 9999,
       "hotel": {
         "id": "3242",
         "hotelname": "X-hotel"

@@ -25,14 +25,11 @@ export class RoomService {
   }
 
   updateRoom(room: RoomModel): Observable<RoomModel> {
-    console.log(room);
-    return this.http.put<RoomModel>(this.baseUrl +  '/' +room.id, room);
-
+    return this.http.put<RoomModel>(`${this.baseUrl}/${room.id}`, room);
   }
 
   getByRoomId(roomId: string): Observable<RoomModel> {
-    return this.http.get<RoomModel>(this.baseUrl + '/' + roomId);
-
+    return this.http.get<RoomModel>(`${this.baseUrl}/${roomId}`);
   }
 
 }

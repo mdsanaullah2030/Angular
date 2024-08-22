@@ -57,7 +57,7 @@ export class UpdateroomComponent implements OnInit{
   loadRoomDetails(): void {
     this.roomService.getByRoomId(this.roomId).subscribe({
       next: (room: RoomModel) => {
-        this.room = this.room;
+        this.room = room;
         this.roomForm.patchValue({
           roomType: room.roomType,
           adults: room.adults,
@@ -77,6 +77,8 @@ export class UpdateroomComponent implements OnInit{
       ...this.room,
       ...this.roomForm.value
     };
+
+    console.log(updatedRoom);
 
     this.roomService.updateRoom(updatedRoom).subscribe({
       next: () => {

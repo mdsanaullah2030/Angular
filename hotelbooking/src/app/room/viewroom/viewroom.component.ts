@@ -39,7 +39,7 @@ export class ViewroomComponent implements OnInit {
         }
       });
   }
-  editRoom(room: RoomModel): void {
-    this.router.navigate(['/updateRoom', room.id]);
+  editRoom(id: RoomModel): void {
+    this.router.navigate(['/updateRoom',id]);
   }
 }

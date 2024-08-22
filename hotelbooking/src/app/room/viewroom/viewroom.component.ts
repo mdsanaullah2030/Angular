@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RoomService } from '../../service/room.service';
 import { HotelService } from '../../service/hotel.service';
 import { Router } from '@angular/router';
+import { RoomModel } from '../../model/room.model';
 
 @Component({
   selector: 'app-viewroom',
@@ -22,7 +23,7 @@ export class ViewroomComponent implements OnInit {
   }
   ngOnInit(): void {
     this.rooms = this.roomService.viewAllRoom();
-    this.hotels = this.hotelService.getAllStudentforRoom();
+    this.hotels = this.hotelService.getAllHotelforRoom();
   }
 
   deleteRoom(id: string) {
@@ -32,11 +33,13 @@ export class ViewroomComponent implements OnInit {
           this.rooms = this.roomService.viewAllRoom();
           this.router.navigate(['/roomview']);
         },
-      
+
         error: error => {
           console.log(error);
         }
       });
-}
-
+  }
+  editRoom(room: RoomModel): void {
+    this.router.navigate(['/updateroom', room.id]);
+  }
 }

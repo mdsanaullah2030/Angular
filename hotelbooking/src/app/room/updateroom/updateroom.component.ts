@@ -18,7 +18,7 @@ export class UpdateroomComponent implements OnInit{
   roomForm!: FormGroup;
 
   constructor(
-    private romService: RoomService,
+    private roomService: RoomService,
     private hotelService: HotelService,
     private formBuilder: FormBuilder, 
     private router: Router,
@@ -50,6 +50,41 @@ export class UpdateroomComponent implements OnInit{
       },
       error: (err) => {
         console.error(err);
+      }
+    });
+  }
+
+  loadRoomDetails(): void {
+    this.roomService.getByRoomId(this.roomId).subscribe({
+      next: (room: RoomModel) => {
+        this.room = this.room;
+        this.roomForm.patchValue({
+          roomType: room.roomType,
+          adults: room.adults,
+          children: room.children,
+          price: room.price,
+          hotel: room.hotel
+        });
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    });
+  }
+
+  updateRoom(): void {
+    const updatedRoom: RoomModel = {
+      ...this.room,
+      ...this.roomForm.value
+    };
+
+    this.roomService.updateRoom(updatedRoom).subscribe({
+      next: () => {
+        this.roomForm.reset();
+        this.router.navigate(['/roomview']);
+      },
+      error: (err) => {
+        console.error('Error updating hotel:', err);
       }
     });
   }

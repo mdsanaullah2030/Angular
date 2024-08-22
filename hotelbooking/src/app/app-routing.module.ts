@@ -8,6 +8,7 @@ import { CreatehotelComponent } from './hotel/createhotel/createhotel.component'
 import { UpdatehotelComponent } from './hotel/updatehotel/updatehotel.component';
 import { ViewroomComponent } from './room/viewroom/viewroom.component';
 import { CreateroomComponent } from './room/createroom/createroom.component';
+import { UpdateroomComponent } from './room/updateroom/updateroom.component';
 
 const routes: Routes = [
   {path:'view',component:ViewlocationComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:'createHotel',component:CreatehotelComponent},
   {path:'updateHotel/:id',component:UpdatehotelComponent},
   {path:'roomview',component:ViewroomComponent},
-  {path:'roomcreat',component:CreateroomComponent}
+  {path:'roomcreat',component:CreateroomComponent},
+  {path:'updateroom',component:UpdateroomComponent}
 ];
 
 @NgModule({

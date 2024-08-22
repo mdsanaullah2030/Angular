@@ -35,7 +35,7 @@ export class HotelService {
 
   }
 
-  getAllStudentforRoom():Observable<HotelModel[]>{
+  getAllHotelforRoom():Observable<HotelModel[]>{
     return this.http.get<HotelModel[]>(this.baseUrl)
       .pipe(
         catchError(this.handleError)

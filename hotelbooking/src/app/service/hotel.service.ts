@@ -26,12 +26,12 @@ export class HotelService {
 
   updateHotel(hotel: HotelModel): Observable<HotelModel> {
     console.log(hotel);
-    return this.http.put<HotelModel>(this.baseUrl + hotel.id, hotel);
+    return this.http.put<HotelModel>(this.baseUrl + '/' + hotel.id, hotel);
 
   }
 
   getByHoteluId(hoteleId: string): Observable<HotelModel> {
-    return this.http.get<HotelModel>(this.baseUrl + hoteleId);
+    return this.http.get<HotelModel>(this.baseUrl + '/' + hoteleId);
 
   }
 

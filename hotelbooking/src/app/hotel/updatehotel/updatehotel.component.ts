@@ -53,7 +53,7 @@ export class UpdatehotelComponent implements OnInit {
   loadHotelDetails(): void {
     this.hotelService.getByHoteluId(this.hoteleId).subscribe({
       next: (hotel: HotelModel) => {
-        this.hotel = hotel;
+        this.hotel = hotel; 
         this.hotelForm.patchValue({
           hotelname: hotel.hotelname,
           location: hotel.location

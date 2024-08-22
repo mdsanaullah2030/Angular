@@ -24,4 +24,15 @@ export class RoomService {
     return this.http.delete(`${this.baseUrl}/${id}`);
   }
 
+  updateRoom(room: RoomModel): Observable<RoomModel> {
+    console.log(room);
+    return this.http.put<RoomModel>(this.baseUrl +  '/' +room.id, room);
+
+  }
+
+  getByRoomId(roomId: string): Observable<RoomModel> {
+    return this.http.get<RoomModel>(this.baseUrl + '/' + roomId);
+
+  }
+
 }

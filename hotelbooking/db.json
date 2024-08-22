@@ -30,16 +30,16 @@
       "id": "3242",
       "hotelname": "X-hotel",
       "location": {
-        "id": "3a39",
-        "locationname": "rajshahi"
+        "id": "f1d6",
+        "locationname": "kuyakata"
       }
     },
     {
       "id": "3aeb",
-      "hotelname": "Y-hotel",
+      "hotelname": "Y-hotel PIZZA",
       "location": {
-        "id": "1",
-        "locationname": "Dhaka"
+        "id": "00f0",
+        "locationname": "Chapinewbgong"
       }
     }
   ],

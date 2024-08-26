@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Bookings</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Bookings</h2>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>User Name</th>
+                    <th>Location Name</th>
+                    <th>Hotel Name</th>
+                    <th>Room Type</th>
+                    <th>Check-in Date</th>
+                    <th>Check-out Date</th>
+                    <th>Total Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let st of bookings | async">
+                    <td>{{ st.username }}</td>
+                    <td>{{ st.location.locationname }}</td>
+                    <td>{{ st.hotel.hotelname }}</td>
+                    <td>{{ st.room.roomtype }}</td>
+                    <td>{{ st.checkindate }}</td>
+                    <td>{{ st.checkoutdate }}</td>
+                    <td>{{ st.totalprice }}</td>
+                    <td>
+                        <button class="btn btn-warning btn-m p-1" (click)="updateBooking(st.id)"> Edit </button>
+                        <button class="btn btn-danger btn-m p-1" (click)="deleteBooking(st.id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

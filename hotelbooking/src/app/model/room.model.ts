@@ -1,6 +1,6 @@
 export class RoomModel {
     id!: string ;                  
-    roomType!: string ;    
+    roomtype!: string ;    
     adults!: number ;           
     children!: number ;        
     price!: number  ;

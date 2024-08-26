@@ -1,0 +1,215 @@
+{
+  "location": [
+    {
+      "id": "1",
+      "locationname": "Dhaka"
+    },
+    {
+      "id": "3a39",
+      "locationname": "rajshahi"
+    },
+    {
+      "id": "00f0",
+      "locationname": "Chapinewbgong"
+    }
+  ],
+  "hotel": [
+    {
+      "id": "b4fb",
+      "hotelname": "Shabab ahmed Skip",
+      "address": "safdfa",
+      "rating": "**",
+      "location": {
+        "id": "1",
+        "locationname": "Dhaka"
+      }
+    },
+    {
+      "id": "53fa",
+      "hotelname": "M-Hotel",
+      "address": "Dhanmodi",
+      "rating": "***",
+      "location": {
+        "id": "1",
+        "locationname": "Dhaka"
+      }
+    },
+    {
+      "id": "b04b",
+      "hotelname": "sfsdf",
+      "address": "dfdssdfsd",
+      "rating": "***",
+      "location": {
+        "id": "3a39",
+        "locationname": "rajshahi"
+      }
+    },
+    {
+      "id": "e3a0",
+      "hotelname": "dsdfsa",
+      "address": "sdfdfsd",
+      "rating": "****",
+      "location": {
+        "id": "f1d6",
+        "locationname": "kuyakata"
+      }
+    },
+    {
+      "id": "1949",
+      "hotelname": "sdfas",
+      "address": "aferr",
+      "rating": "***",
+      "location": {
+        "id": "f1d6",
+        "locationname": "kuyakata"
+      }
+    }
+  ],
+  "room": [
+    {
+      "id": "room1",
+      "roomType": "Deluxe Suite",
+      "adults": 2,
+      "children": 2,
+      "price": 200,
+      "hotel": {
+        "id": "hotel1",
+        "hotelname": "Grand Hotel"
+      }
+    },
+    {
+      "id": "e9e1",
+      "roomType": "Double Room",
+      "adults": 5,
+      "children": 6,
+      "price": 7000,
+      "hotel": {
+        "id": "53fa",
+        "hotelname": "M-Hotel"
+      }
+    }
+  ],
+  "booking": [
+    {
+      "id": "1",
+      "username": "sdsfsa",
+      "checkindate": "8.21.2024",
+      "checkoutdate": "8.23.2024",
+      "totalprice": "5555",
+      "room": {
+        "id": "1",
+        "roomType": "Double Room",
+        "hotel": {
+          "id": "1",
+          "hotelname": "M-Hotel",
+          "location": {
+            "id": "1",
+            "locationname": "rajshahi"
+          }
+        }
+      }
+    },
+    {
+      "id": "d1e1",
+      "username": "erwe4r",
+      "checkindate": "2024-08-09",
+      "checkoutdate": "2024-08-30",
+      "totalprice": 54654,
+      "room": {
+        "id": "",
+        "roomtype": ""
+      },
+      "hotel": {
+        "id": "",
+        "hotelname": ""
+      },
+      "location": {
+        "id": "",
+        "locationname": ""
+      }
+    },
+    {
+      "id": "45f1",
+      "username": "asdasd",
+      "checkindate": "2024-08-15",
+      "checkoutdate": "2024-08-27",
+      "totalprice": 2342,
+      "room": {
+        "roomType": "Double Room"
+      },
+      "hotel": {
+        "hotelname": "Shabab ahmed Skip"
+      },
+      "location": {
+        "locationname": "Dhaka"
+      }
+    },
+    {
+      "id": "cf05",
+      "username": "fdgfd",
+      "checkindate": "2024-08-21",
+      "checkoutdate": "2024-08-21",
+      "totalprice": 34534,
+      "room": {
+        "roomType": "Deluxe Suite"
+      },
+      "hotel": {
+        "hotelname": "M-Hotel"
+      },
+      "location": {
+        "locationname": "Dhaka"
+      }
+    },
+    {
+      "id": "d0a7",
+      "username": "",
+      "checkindate": "2024-08-20",
+      "checkoutdate": "2024-08-11",
+      "totalprice": 43534,
+      "room": {
+        "roomType": "Double Room"
+      },
+      "hotel": {
+        "hotelname": "M-Hotel"
+      },
+      "location": {
+        "locationname": "Dhaka"
+      }
+    },
+    {
+      "id": "c852",
+      "username": "sdfa",
+      "checkindate": "2024-08-25",
+      "checkoutdate": "2024-08-31",
+      "totalprice": 234,
+      "room": {
+        "roomType": "Deluxe Suite"
+      },
+      "hotel": {
+        "hotelname": "M-Hotel"
+      },
+      "location": {
+        "locationname": "rajshahi"
+      }
+    },
+    {
+      "id": "7824",
+      "username": "sdfs",
+      "checkindate": "2024-08-30",
+      "checkoutdate": "2024-08-09",
+      "totalprice": 435,
+      "room": {
+        "id": "room1",
+        "roomType": "Deluxe Suite"
+      },
+      "hotel": {
+        "id": "b4fb",
+        "hotelname": "Shabab ahmed Skip"
+      },
+      "location": {
+        "id": "1",
+        "locationname": "Dhaka"
+      }
+    }
+  ]
+}

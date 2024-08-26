@@ -11,11 +11,21 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './updateroom.component.html',
   styleUrl: './updateroom.component.css'
 })
-export class UpdateroomComponent implements OnInit{
+export class UpdateroomComponent implements OnInit {
   room: RoomModel = new RoomModel();
   hotels: HotelModel[] = [];
   roomId: string = "";
   roomForm!: FormGroup;
+
+  roomtyp: { value: string, label: string, price: number }[] = [
+    { value: 'Single Room', label: 'Single Room', price: 5000 },
+    { value: 'Double Room', label: 'Double Room', price: 7000 },
+    { value: 'Triple Room', label: 'Triple Room', price: 9000 },
+    { value: 'Family Room', label: 'Family Room', price: 12000 },
+    { value: 'Superior Room', label: 'Superior Room', price: 15000 },
+    { value: 'Executive Room', label: 'Executive Room', price: 20000 },
+    { value: 'Presidential Suite', label: 'Presidential Suite', price: 30000 },
+  ];
 
   constructor(
     private roomService: RoomService,
@@ -23,24 +33,32 @@ export class UpdateroomComponent implements OnInit{
     private formBuilder: FormBuilder, 
     private router: Router,
     private route: ActivatedRoute
-  ){
-
-  }
+  ) {}
 
   ngOnInit(): void {
-    this.roomId=this.route.snapshot.params['id'];
+    this.roomId = this.route.snapshot.params['id'];
     this.roomForm = this.formBuilder.group({
-      roomType: [''],
+      roomtype: [''],
       adults: [''],
       children: [''],
-      price: [''],
+      price: [{ value: '', disabled: true }], // Disabled input as price is auto-calculated
       hotel: this.formBuilder.group({
-        id: [undefined],
-        hotelname: [undefined]
+        id: [''],
+        hotelname: ['']
       })
     });
     this.loadHotel();
     this.loadRoomDetails();
+    this.roomForm.get('roomtype')?.valueChanges.subscribe(() => {
+      this.updatePriceBasedOnRoomtype();
+    });
+  }
+
+  updatePriceBasedOnRoomtype() {
+    const selectedRoom = this.roomtyp.find(room => room.value === this.roomForm.get('roomtype')?.value);
+    if (selectedRoom) {
+      this.roomForm.patchValue({ price: selectedRoom.price });
+    }
   }
 
   loadHotel(): void {
@@ -59,7 +77,7 @@ export class UpdateroomComponent implements OnInit{
       next: (room: RoomModel) => {
         this.room = room;
         this.roomForm.patchValue({
-          roomType: room.roomType,
+          roomtype: room.roomtype,
           adults: room.adults,
           children: room.children,
           price: room.price,
@@ -75,10 +93,8 @@ export class UpdateroomComponent implements OnInit{
   updateRoom(): void {
     const updatedRoom: RoomModel = {
       ...this.room,
-      ...this.roomForm.value
+      ...this.roomForm.getRawValue() 
     };
-
-    console.log(updatedRoom);
 
     this.roomService.updateRoom(updatedRoom).subscribe({
       next: () => {
@@ -86,9 +102,8 @@ export class UpdateroomComponent implements OnInit{
         this.router.navigate(['/roomview']);
       },
       error: (err) => {
-        console.error('Error updating hotel:', err);
+        console.error('Error updating room:', err);
       }
     });
   }
-
 }

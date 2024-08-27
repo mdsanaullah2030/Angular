@@ -6,38 +6,45 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-viewuser',
   templateUrl: './viewuser.component.html',
-  styleUrl: './viewuser.component.css'
+  styleUrls: ['./viewuser.component.css']  
 })
 export class ViewuserComponent implements OnInit {
-users:any;
-constructor(
-  private userService:UserService,
-  private router:Router,
-  private httpClient:HttpClient
-){
-  
-}
+  users: any;
+  searchText: string = '';
 
+  constructor(
+    private userService: UserService,
+    private router: Router,
+    private httpClient: HttpClient
+  ) {}
 
   ngOnInit(): void {
-    this.users=this.userService.getAlluser();
+    this.userService.getAlluser().subscribe({
+      next: (data) => {
+        this.users = data;
+      },
+      error: (error) => {
+        console.log('Error fetching users:', error);
+      }
+    });
   }
-  deleteUser(id:string){
-this.userService.deleteUser(id)
-.subscribe({
-next:res=>{
-  this.users=this.userService.getAlluser();
-  this.router.navigate(['view']);
-},
-  
-error: error => {
-  console.log(error);
 
-}
-});
+  deleteUser(id: string) {
+    this.userService.deleteUser(id).subscribe({
+      next: (res) => {
+        this.userService.getAlluser().subscribe({
+          next: (data) => {
+            this.users = data;
+          }
+        });
+      },
+      error: (error) => {
+        console.log('Error deleting user:', error);
+      }
+    });
+  }
 
-}
-updateUser(id:string){
-  this.router.navigate(['update',id])
-}
+  updateUser(id: string) {
+    this.router.navigate(['update', id]);
+  }
 }

@@ -1,35 +1,49 @@
 <div class="container">
-  <link rel="stylesheet" href="/w3css/4/w3.css">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-            
-          <th>User ID</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>NID Number</th>
-          <th>Phone Number</th>
-          
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let us of users |async">
-           
-          <td>{{ us.userid}}</td>
-          <td>{{ us.name }}</td>
-          <td>{{ us.email }}</td>
-          <td>{{ us.nid }}</td>
-          <td>{{ us.phonenumber }}</td>
-          <td>
-           
-
-            <button class="btn btn-danger m-1 p-1" (click)="updateUser(us.id)">Edit</button>
-            <button class="btn btn-warning m-1 p-1 cl" (click)="deleteUser(us.id)">Delete</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="Search-hero">
+    <input 
+      type="text" 
+      name="search" 
+      [(ngModel)]="searchText" 
+      placeholder="Search by location name" 
+      class="form-control mt-3"
+    >
   </div>
-  
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>NID Number</th>
+        <th>Phone Number</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let us of users | searchFilter:searchText">
+        <td>{{ us.userid }}</td>
+        <td>{{ us.name }}</td>
+        <td>{{ us.email }}</td>
+        <td>{{ us.nid }}</td>
+        <td>{{ us.phonenumber }}</td>
+        <td> 
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+        </td>
+        
+        
+        <td>
+          <button class="btn btn-danger m-1 p-1" (click)="updateUser(us.id)">Edit</button>
+          <button class="btn btn-warning m-1 p-1 cl" (click)="deleteUser(us.id)">Delete</button>
+        </td>
+        <div class="col-md-6">
+          <p><i class="fa-thin fa-map-location-dot"></i> Map</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12283.868254170973!2d90.37187831383655!3d23.74681305413135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bf4e28d50811%3A0xea3f974b8b7405db!2z4Ka24KaZ4KeN4KaV4Kaw!5e0!3m2!1sbn!2sbd!4v1709231995372!5m2!1sbn!2sbd"
+            width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+</div>

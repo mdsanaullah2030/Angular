@@ -5,10 +5,6 @@
       "locationname": "Dhaka"
     },
     {
-      "id": "f1d6",
-      "locationname": "kuyakata"
-    },
-    {
       "id": "3a39",
       "locationname": "rajshahi"
     },
@@ -21,22 +17,58 @@
     {
       "id": "b4fb",
       "hotelname": "Shabab ahmed Skip",
+      "address": "safdfa",
+      "rating": "**",
       "location": {
-        "id": "55b3",
-        "locationname": "Azimpur"
+        "id": "1",
+        "locationname": "Dhaka"
       }
     },
     {
-      "id": "3242",
-      "hotelname": "X-hotel",
+      "id": "53fa",
+      "hotelname": "M-Hotel",
+      "address": "Dhanmodi",
+      "rating": "***",
+      "location": {
+        "id": "1",
+        "locationname": "Dhaka"
+      }
+    },
+    {
+      "id": "b04b",
+      "hotelname": "sfsdf",
+      "address": "dfdssdfsd",
+      "rating": "***",
+      "location": {
+        "id": "3a39",
+        "locationname": "rajshahi"
+      }
+    },
+    {
+      "id": "e3a0",
+      "hotelname": "dsdfsa",
+      "address": "sdfdfsd",
+      "rating": "****",
       "location": {
         "id": "f1d6",
         "locationname": "kuyakata"
       }
     },
     {
-      "id": "3aeb",
-      "hotelname": "Y-hotel PIZZA",
+      "id": "1949",
+      "hotelname": "sdfas",
+      "address": "aferr",
+      "rating": "***",
+      "location": {
+        "id": "f1d6",
+        "locationname": "kuyakata"
+      }
+    },
+    {
+      "id": "af89",
+      "hotelname": "sadadasd",
+      "address": "sdafsfsafdsfg",
+      "rating": "*****",
       "location": {
         "id": "00f0",
         "locationname": "Chapinewbgong"
@@ -46,13 +78,64 @@
   "room": [
     {
       "id": "room1",
-      "roomType": "Deluxe Suite",
+      "roomtype": "Deluxe Suite",
       "adults": 2,
       "children": 2,
       "price": 200,
       "hotel": {
         "id": "hotel1",
         "hotelname": "Grand Hotel"
+      }
+    },
+    {
+      "id": "257e",
+      "roomtype": "Triple Room",
+      "adults": 5,
+      "children": 6,
+      "price": 9000,
+      "hotel": {
+        "id": "e3a0",
+        "hotelname": "dsdfsa"
+      }
+    },
+    {
+      "id": "3296",
+      "roomtype": "Superior Room",
+      "adults": 5,
+      "children": 4,
+      "price": 15000,
+      "hotel": {
+        "id": "e3a0",
+        "hotelname": "dsdfsa"
+      }
+    },
+    {
+      "id": "2024",
+      "roomtype": "Presidential Suite",
+      "adults": 5,
+      "children": 8,
+      "price": 30000,
+      "hotel": {
+        "id": "53fa",
+        "hotelname": "M-Hotel"
+      }
+    }
+  ],
+  "booking": [
+    {
+      "id": "0dfd",
+      "username": "sdfa",
+      "checkindate": "2024-08-16",
+      "checkoutdate": "2024-08-30",
+      "totalprice": 280000,
+      "room": {
+        "roomtype": "Presidential Suite"
+      },
+      "hotel": {
+        "hotelname": "M-Hotel"
+      },
+      "location": {
+        "locationname": "Dhaka"
       }
     }
   ]

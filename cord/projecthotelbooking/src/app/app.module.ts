@@ -15,6 +15,9 @@ import { CreateroomComponent } from './room/createroom/createroom.component';
 import { ViewbookingComponent } from './booking/viewbooking/viewbooking.component';
 import { UpdatebookingComponent } from './booking/updatebooking/updatebooking.component';
 import { CreatebookingComponent } from './booking/createbooking/createbooking.component';
+import { SearchFilterPipe } from './search-filter.pipe';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,16 @@ import { CreatebookingComponent } from './booking/createbooking/createbooking.co
     CreateroomComponent,
     ViewbookingComponent,
     UpdatebookingComponent,
-    CreatebookingComponent
+    CreatebookingComponent,
+    SearchFilterPipe,
+    MapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GoogleMapsModule
   ],
   providers: [
    

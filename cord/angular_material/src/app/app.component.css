@@ -1,0 +1,87 @@
+.accomodation_area {
+    padding: 60px 0;
+    background-color: #f9f9ff;
+}
+
+.section_title {
+    margin-bottom: 50px;
+}
+
+.title_color {
+    color: #2c3e50;
+}
+
+.section_title p {
+    margin-bottom: 0;
+    color: #777;
+    font-size: 16px;
+}
+
+.accomodation_two {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Adds spacing between columns */
+}
+
+.col-lg-3, .col-sm-6 {
+    flex: 1 1 calc(25% - 15px); /* 25% width minus the gap */
+    max-width: calc(25% - 15px);
+}
+
+.accomodation_item {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.accomodation_item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hotel_img {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.hotel_img img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.theme_btn {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff6b6b;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.theme_btn:hover {
+    background: #ff4757;
+    color: #fff;
+}
+
+.sec_h4 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 16px;
+    color: #ff6b6b;
+    margin-bottom: 0;
+}
+
+h5 small {
+    font-size: 12px;
+    color: #aaa;
+}

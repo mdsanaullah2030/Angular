@@ -1,0 +1,174 @@
+{
+  "location": [
+    {
+      "id": "1",
+      "locationname": "Dhaka"
+    },
+    {
+      "id": "3a39",
+      "locationname": "rajshahi"
+    },
+    {
+      "id": "00f0",
+      "locationname": "Chapinewbgong"
+    }
+  ],
+  "hotel": [
+    {
+      "id": "b4fb",
+      "hotelname": "Shabab ahmed Skip",
+      "address": "safdfa",
+      "rating": "**",
+      "location": {
+        "id": "1",
+        "locationname": "Dhaka"
+      }
+    },
+    {
+      "id": "53fa",
+      "hotelname": "M-Hotel",
+      "address": "Dhanmodi",
+      "rating": "***",
+      "location": {
+        "id": "1",
+        "locationname": "Dhaka"
+      }
+    },
+    {
+      "id": "b04b",
+      "hotelname": "sfsdf",
+      "address": "dfdssdfsd",
+      "rating": "***",
+      "location": {
+        "id": "3a39",
+        "locationname": "rajshahi"
+      }
+    },
+    {
+      "id": "e3a0",
+      "hotelname": "dsdfsa",
+      "address": "sdfdfsd",
+      "rating": "****",
+      "location": {
+        "id": "f1d6",
+        "locationname": "kuyakata"
+      }
+    },
+    {
+      "id": "1949",
+      "hotelname": "sdfas",
+      "address": "aferr",
+      "rating": "***",
+      "location": {
+        "id": "f1d6",
+        "locationname": "kuyakata"
+      }
+    },
+    {
+      "id": "af89",
+      "hotelname": "sadadasd",
+      "address": "sdafsfsafdsfg",
+      "rating": "*****",
+      "location": {
+        "id": "00f0",
+        "locationname": "Chapinewbgong"
+      }
+    }
+  ],
+  "room": [
+    {
+      "id": "room1",
+      "roomtype": "Deluxe Suite",
+      "adults": 2,
+      "children": 2,
+      "price": 200,
+      "hotel": {
+        "id": "hotel1",
+        "hotelname": "Grand Hotel"
+      }
+    },
+    {
+      "id": "257e",
+      "roomtype": "Triple Room",
+      "adults": 5,
+      "children": 6,
+      "price": 9000,
+      "hotel": {
+        "id": "e3a0",
+        "hotelname": "dsdfsa"
+      }
+    },
+    {
+      "id": "3296",
+      "roomtype": "Superior Room",
+      "adults": 5,
+      "children": 4,
+      "price": 15000,
+      "hotel": {
+        "id": "e3a0",
+        "hotelname": "dsdfsa"
+      }
+    },
+    {
+      "id": "2024",
+      "roomtype": "Presidential Suite",
+      "adults": 5,
+      "children": 8,
+      "price": 30000,
+      "hotel": {
+        "id": "53fa",
+        "hotelname": "M-Hotel"
+      }
+    }
+  ],
+  "booking": [
+    {
+      "id": "edd2",
+      "username": "sanaullah",
+      "checkindate": "2024-08-15",
+      "checkoutdate": "2024-08-29",
+      "totalprice": 238000,
+      "room": {
+        "roomtype": "Executive Room"
+      },
+      "hotel": {
+        "hotelname": "sadadasd"
+      },
+      "location": {
+        "locationname": "Dhaka"
+      }
+    },
+    {
+      "id": "283a",
+      "username": "sadassa",
+      "checkindate": "2024-08-24",
+      "checkoutdate": "2024-08-31",
+      "totalprice": 105000,
+      "room": {
+        "roomtype": "Superior Room"
+      },
+      "hotel": {
+        "hotelname": "sdfas"
+      },
+      "location": {
+        "locationname": "Chapinewbgong"
+      }
+    },
+    {
+      "id": "592e",
+      "username": "jhh",
+      "checkindate": "2024-08-29",
+      "checkoutdate": "2024-08-30",
+      "totalprice": 17000,
+      "room": {
+        "roomtype": "Executive Room"
+      },
+      "hotel": {
+        "hotelname": ""
+      },
+      "location": {
+        "locationname": "rajshahi"
+      }
+    }
+  ]
+}

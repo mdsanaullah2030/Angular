@@ -1,0 +1,24 @@
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="locationName"
+    placeholder="Enter location name"
+    (keyup.enter)="searchHotels()"
+  />
+  <button (click)="searchHotels()">Search</button>
+
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <ul *ngIf="hotels.length > 0">
+    <li *ngFor="let hotel of hotels">
+      <h3>{{ hotel.hotelname }}</h3>
+      <p>Address: {{ hotel.address }}</p>
+      <p>Rating: {{ hotel.rating }}</p>
+      <p>Location: {{ hotel.location.locationname }}</p>
+    </li>
+  </ul>
+
+  <div *ngIf="hotels.length === 0 && !errorMessage" class="no-results">
+    No hotels found for the specified location.
+  </div>
+</div>

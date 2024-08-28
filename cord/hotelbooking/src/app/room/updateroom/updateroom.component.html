@@ -12,7 +12,7 @@
             <fa-icon [icon]="['fas', 'door-open']"></fa-icon>
             Room Type
           </label>
-          <select class="form-select" id="roomtype" formControlName="roomType">
+          <select class="form-select" id="roomtype" formControlName="roomtype">
             <option *ngFor="let option of roomtyp" [value]="option.value">
               {{ option.label }}
             </option>

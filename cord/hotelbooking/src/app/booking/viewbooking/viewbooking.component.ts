@@ -4,6 +4,7 @@ import { HotelService } from '../../service/hotel.service';
 import { Router } from '@angular/router';
 import { LocationService } from '../../service/location.service';
 import { BookingService } from '../../service/booking.service';
+import { BookingModel } from '../../model/booking.model';
 
 @Component({
   selector: 'app-viewbooking',
@@ -13,7 +14,7 @@ import { BookingService } from '../../service/booking.service';
 export class ViewbookingComponent implements OnInit {
 
 
-  location: any;
+  locations: any;
   rooms: any;
   hotels: any;
   bookings: any;
@@ -33,9 +34,8 @@ export class ViewbookingComponent implements OnInit {
     this.rooms = this.roomService.getAllBkingforRoom();
     this.hotels = this.hotelService.getAllHotelforRoom();
     this.bookings = this.bookingService.viewAllBooking();
-    this.location = this.locationService.getAllLocationforHotel();
+    this.locations = this.locationService.getAllLocationforHotel();
   }
-
 
   loadBooking() {
     this.bookingService.viewAllBooking().subscribe({
@@ -48,4 +48,22 @@ export class ViewbookingComponent implements OnInit {
     });
   }
 
+  deleteBooking(id: string): void {
+    this.bookingService.deleteBooking(id).subscribe({
+      next: () => {
+        this.loadBooking(); 
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    });
+  }
+  
+  updateBooking(id: BookingModel): void {
+    this.router.navigate(['/updateBooking',id]);
+  }
+  AddBooking(){
+    this.router.navigateByUrl('/creat');
+
+  }
 }

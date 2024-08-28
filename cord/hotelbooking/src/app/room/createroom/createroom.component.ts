@@ -38,7 +38,7 @@ export class CreateroomComponent implements OnInit{
     ngOnInit(): void {
       this.loadHotel();
       this.roomForm = this.formBuilder.group({
-        roomType: [''],  // Ensure the form control name matches the template
+        roomtype: [''],
         adults: [''],
         children: [''],
         price: [''],
@@ -56,8 +56,8 @@ export class CreateroomComponent implements OnInit{
         }
       });
   
-      this.roomForm.get('roomType')?.valueChanges.subscribe(roomType => {
-        const selectedRoomType = this.roomtyp.find(rt => rt.value === roomType);
+      this.roomForm.get('roomtype')?.valueChanges.subscribe(roomtype => {
+        const selectedRoomType = this.roomtyp.find(rt => rt.value === roomtype);
         if (selectedRoomType) {
           this.roomForm.patchValue({ price: selectedRoomType.price });
         }
@@ -76,7 +76,7 @@ export class CreateroomComponent implements OnInit{
     }
   
     createRoom() {
-      this.room.roomType = this.roomForm.value.roomType;
+      this.room.roomtype = this.roomForm.value.roomtype;
       this.room.adults = this.roomForm.value.adults;
       this.room.children = this.roomForm.value.children;
       this.room.price = this.roomForm.value.price;

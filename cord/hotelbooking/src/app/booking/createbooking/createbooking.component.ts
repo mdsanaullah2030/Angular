@@ -23,68 +23,95 @@ export class CreatebookingComponent {
   BookingForm!: FormGroup;
   booking: BookingModel = new BookingModel();
 
+  roomtyp: { value: string, label: string, price: number }[] = [
+    { value: 'Single Room', label: 'Single Room', price: 5000 },
+    { value: 'Double Room', label: 'Double Room', price: 7000 },
+    { value: 'Triple Room', label: 'Triple Room', price: 9000 },
+    { value: 'Family Room', label: 'Family Room', price: 12000 },
+    { value: 'Superior Room', label: 'Superior Room', price: 15000 },
+    { value: 'Executive Room', label: 'Executive Room', price: 17000 },
+    { value: 'Presidential Suite', label: 'Presidential Suite', price: 20000 },
+  ];
+
   constructor(
-    private formBuilder: FormBuilder,
-    private bookingService: BookingService,
-    private locationService: LocationService,
     private hotelService: HotelService,
+    private locationService: LocationService,
     private roomService: RoomService,
+    private bookingService: BookingService,
+    private formBuilder: FormBuilder,
     private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.loadLocation();
-    this.loadHotel();
-    this.loadRoom();
-
     this.BookingForm = this.formBuilder.group({
       username: [''],
       checkindate: [''],
       checkoutdate: [''],
-      totalprice: [''],
+      totalprice: [{ value: '' }],
       room: this.formBuilder.group({
-        id:[''],
-        roomType: [''],
+        roomtype: [''],
       }),
       hotel: this.formBuilder.group({
-        id:[''],
         hotelname: [''],
       }),
       location: this.formBuilder.group({
-        id:[''],
         locationname: [''],
       }),
     });
 
-    this.BookingForm.get('room')?.get('roomType')?.valueChanges.subscribe(roomType => {
-      const selectedRoom = this.rooms.find(room => room.roomType === roomType);
-      if (selectedRoom) {
-        this.BookingForm.patchValue({ room: selectedRoom });
-      }
+    this.loadLocation();
+    this.loadHotel();
+    this.loadRoom();
+
+    this.BookingForm.get('room')?.get('roomtype')?.valueChanges.subscribe(roomtype => {
+      this.updatePrice();
+      this.calculateNightsAndCost();
     });
 
-    this.BookingForm.get('hotel')?.get('hotelname')?.valueChanges.subscribe(hotelname => {
-      const selectedHotel = this.hotels.find(hotel => hotel.hotelname === hotelname);
-      if (selectedHotel) {
-        this.BookingForm.patchValue({ hotel: selectedHotel });
-      }
+    this.BookingForm.get('checkindate')?.valueChanges.subscribe(() => {
+      this.calculateNightsAndCost();
     });
 
-    this.BookingForm.get('location')?.get('locationname')?.valueChanges.subscribe(locationname => {
-      const selectedLocation = this.locations.find(loc => loc.locationname === locationname);
-      if (selectedLocation) {
-        this.BookingForm.patchValue({ location: selectedLocation });
-      }
+    this.BookingForm.get('checkoutdate')?.valueChanges.subscribe(() => {
+      this.calculateNightsAndCost();
     });
   }
 
-  loadLocation() {
-    this.locationService.getAllLocationforHotel().subscribe({
+  updatePrice() {
+    const roomType = this.BookingForm.get('room')?.get('roomtype')?.value;
+    const selectedRoom = this.roomtyp.find(r => r.value === roomType);
+    if (selectedRoom) {
+      this.BookingForm.patchValue({ totalprice: selectedRoom.price });
+    }
+  }
+
+  calculateNightsAndCost() {
+    const checkinDate = new Date(this.BookingForm.get('checkindate')?.value);
+    const checkoutDate = new Date(this.BookingForm.get('checkoutdate')?.value);
+
+    if (checkinDate && checkoutDate && checkinDate < checkoutDate) {
+      const timeDifference = checkoutDate.getTime() - checkinDate.getTime();
+      const totalNights = timeDifference / (1000 * 3600 * 24);
+
+      const roomType = this.BookingForm.get('room')?.get('roomtype')?.value;
+      const selectedRoom = this.roomtyp.find(r => r.value === roomType);
+
+      if (selectedRoom) {
+        const totalPrice = totalNights * selectedRoom.price;
+        this.BookingForm.patchValue({ totalprice: totalPrice });
+      }
+    } else {
+      this.BookingForm.patchValue({ totalprice: 0 });
+    }
+  }
+
+  loadRoom() {
+    this.roomService.getAllBkingforRoom().subscribe({
       next: res => {
-        this.locations = res;
+        this.rooms = res;
       },
-      error: err => {
-        console.error(err);
+      error: error => {
+        console.log(error);
       }
     });
   }
@@ -94,33 +121,42 @@ export class CreatebookingComponent {
       next: res => {
         this.hotels = res;
       },
-      error: err => {
-        console.error(err);
+      error: error => {
+        console.log(error);
       }
     });
   }
 
-  loadRoom() {
-    this.roomService.getAllBkingforRoom().subscribe({
+  loadLocation() {
+    this.locationService.getAllLocationforHotel().subscribe({
       next: res => {
-        this.rooms = res;
+        this.locations = res;
       },
-      error: err => {
-        console.error(err);
+      error: error => {
+        console.log(error);
       }
     });
   }
 
   createBooking() {
-    this.booking = this.BookingForm.value;
+    this.booking.username = this.BookingForm.value.username;
+    this.booking.checkindate = this.BookingForm.value.checkindate;
+    this.booking.checkoutdate = this.BookingForm.value.checkoutdate;
+    this.booking.totalprice = this.BookingForm.value.totalprice;
+    this.booking.room = this.BookingForm.value.room;
+    this.booking.hotel = this.BookingForm.value.hotel;
+    this.booking.location = this.BookingForm.value.location;
+
+    console.log(this.BookingForm);
+    console.log(this.booking);
 
     this.bookingService.createBooking(this.booking).subscribe({
       next: res => {
         this.BookingForm.reset();
         this.router.navigate(['booking']);
       },
-      error: err => {
-        console.error(err);
+      error: error => {
+        console.log(error);
       }
     });
   }

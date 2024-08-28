@@ -11,6 +11,11 @@ import { CreateroomComponent } from './room/createroom/createroom.component';
 import { UpdateroomComponent } from './room/updateroom/updateroom.component';
 import { ViewbookingComponent } from './booking/viewbooking/viewbooking.component';
 import { CreatebookingComponent } from './booking/createbooking/createbooking.component';
+import { UpdatebookingComponent } from './booking/updatebooking/updatebooking.component';
+import { AboutComponent } from './style/about/about.component';
+import { HomeComponent } from './style/home/home.component';
+import { AccomodationComponent } from './style/accomodation/accomodation.component';
+
 
 const routes: Routes = [
   {path:'view',component:ViewlocationComponent},
@@ -23,7 +28,12 @@ const routes: Routes = [
   {path:'roomcreat',component:CreateroomComponent},
   {path:'updateRoom/:id',component:UpdateroomComponent},
   {path:'booking',component:ViewbookingComponent},
-  {path:'creat',component:CreatebookingComponent}
+  {path:'creat',component:CreatebookingComponent},
+  {path:'updateBooking/:id',component:UpdatebookingComponent},
+  {path:'about',component:AboutComponent},
+  {path:'home',component:HomeComponent},
+  {path:'accomodation',component:AccomodationComponent},
+ 
 ];
 
 @NgModule({

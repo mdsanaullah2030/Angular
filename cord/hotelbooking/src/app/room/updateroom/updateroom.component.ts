@@ -38,7 +38,7 @@ export class UpdateroomComponent implements OnInit {
   ngOnInit(): void {
     this.roomId = this.route.snapshot.params['id'];
     this.roomForm = this.formBuilder.group({
-      roomType: [''],
+      roomtype: [''],
       adults: [''],
       children: [''],
       price: [{ value: '', disabled: true }], // Disabled input as price is auto-calculated
@@ -49,13 +49,13 @@ export class UpdateroomComponent implements OnInit {
     });
     this.loadHotel();
     this.loadRoomDetails();
-    this.roomForm.get('roomType')?.valueChanges.subscribe(() => {
-      this.updatePriceBasedOnRoomType();
+    this.roomForm.get('roomtype')?.valueChanges.subscribe(() => {
+      this.updatePriceBasedOnRoomtype();
     });
   }
 
-  updatePriceBasedOnRoomType() {
-    const selectedRoom = this.roomtyp.find(room => room.value === this.roomForm.get('roomType')?.value);
+  updatePriceBasedOnRoomtype() {
+    const selectedRoom = this.roomtyp.find(room => room.value === this.roomForm.get('roomtype')?.value);
     if (selectedRoom) {
       this.roomForm.patchValue({ price: selectedRoom.price });
     }
@@ -77,7 +77,7 @@ export class UpdateroomComponent implements OnInit {
       next: (room: RoomModel) => {
         this.room = room;
         this.roomForm.patchValue({
-          roomType: room.roomType,
+          roomtype: room.roomtype,
           adults: room.adults,
           children: room.children,
           price: room.price,
@@ -93,7 +93,7 @@ export class UpdateroomComponent implements OnInit {
   updateRoom(): void {
     const updatedRoom: RoomModel = {
       ...this.room,
-      ...this.roomForm.getRawValue() // To get the form values including the disabled ones
+      ...this.roomForm.getRawValue() 
     };
 
     this.roomService.updateRoom(updatedRoom).subscribe({

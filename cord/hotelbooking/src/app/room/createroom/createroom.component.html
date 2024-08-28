@@ -8,7 +8,7 @@
         <label for="roomtype" class="form-label">
           <fa-icon [icon]="['fas', 'door-open']"></fa-icon> Room Type
         </label>
-        <select class="form-select" id="roomtype" formControlName="roomType" required>
+        <select class="form-select" id="roomtype" formControlName="roomtype" required>
           <option *ngFor="let option of roomtyp" [value]="option.value">
             {{ option.label }}
           </option>

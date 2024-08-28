@@ -38,10 +38,32 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/css/bootstrap.css",
+              "src/assets/vendors/linericon/style.css",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/vendors/owl-carousel/owl.carousel.min.css",
+              "src/assets/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css",
+              "src/assets/vendors/nice-select/css/nice-select.css",
+              "src/assets/vendors/owl-carousel/owl.carousel.min.css",
+              "src/assets/css/style.css",
+              "src/assets/css/responsive.css"
+  
             ],
             "scripts": [
-               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",        
+               "src/assets/js/jquery-3.2.1.min.js",
+               "src/assets/js/popper.js",
+               "src/assets/js/bootstrap.min.js",
+               "src/assets/vendors/owl-carousel/owl.carousel.min.js",
+               "src/assets/js/jquery.ajaxchimp.min.js",
+               "src/assets/js/mail-script.js",
+               "src/assets/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js",
+               "src/assets/vendors/nice-select/js/jquery.nice-select.js",
+               "src/assets/js/mail-script.js",
+               "src/assets/js/stellar.js",
+               "src/assets/vendors/lightbox/simpleLightbox.min.js",
+               "src/assets/js/custom.js"
             ],
             "server": "src/main.server.ts",
             "prerender": true,

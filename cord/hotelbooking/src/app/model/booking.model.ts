@@ -8,7 +8,7 @@ export class BookingModel {
 
   room!: {
     id: string | undefined
-    roomType: string | undefined;
+    roomtype: string | undefined;
     hotelname: number | undefined;
     adults: string | undefined;
     children: string | undefined;

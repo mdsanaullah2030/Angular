@@ -20,10 +20,6 @@ import { CreatebookingComponent } from './booking/createbooking/createbooking.co
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import { HomeComponent } from './style/home/home.component';
-import { AboutComponent } from './style/about/about.component';
-import { StyleComponent } from './style/style.component';
-import { AccomodationComponent } from './style/accomodation/accomodation.component';
 
 @NgModule({
   declarations: [
@@ -39,11 +35,7 @@ import { AccomodationComponent } from './style/accomodation/accomodation.compone
     CreateroomComponent,
     ViewbookingComponent,
     UpdatebookingComponent,
-    CreatebookingComponent,
-    HomeComponent,
-    AboutComponent,
-    StyleComponent,
-    AccomodationComponent
+    CreatebookingComponent
   ],
   imports: [
     BrowserModule,

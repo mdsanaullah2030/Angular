@@ -62,8 +62,4 @@ export class ViewbookingComponent implements OnInit {
   updateBooking(id: BookingModel): void {
     this.router.navigate(['/updateBooking',id]);
   }
-  AddBooking(){
-    this.router.navigateByUrl('/creat');
-
-  }
 }

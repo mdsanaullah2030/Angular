@@ -123,51 +123,19 @@
   ],
   "booking": [
     {
-      "id": "edd2",
-      "username": "sanaullah",
-      "checkindate": "2024-08-15",
-      "checkoutdate": "2024-08-29",
-      "totalprice": 238000,
+      "id": "0dfd",
+      "username": "sdfa",
+      "checkindate": "2024-08-16",
+      "checkoutdate": "2024-08-30",
+      "totalprice": 280000,
       "room": {
-        "roomtype": "Executive Room"
+        "roomtype": "Presidential Suite"
       },
       "hotel": {
-        "hotelname": "sadadasd"
+        "hotelname": "M-Hotel"
       },
       "location": {
         "locationname": "Dhaka"
-      }
-    },
-    {
-      "id": "283a",
-      "username": "sadassa",
-      "checkindate": "2024-08-24",
-      "checkoutdate": "2024-08-31",
-      "totalprice": 105000,
-      "room": {
-        "roomtype": "Superior Room"
-      },
-      "hotel": {
-        "hotelname": "sdfas"
-      },
-      "location": {
-        "locationname": "Chapinewbgong"
-      }
-    },
-    {
-      "id": "592e",
-      "username": "jhh",
-      "checkindate": "2024-08-29",
-      "checkoutdate": "2024-08-30",
-      "totalprice": 17000,
-      "room": {
-        "roomtype": "Executive Room"
-      },
-      "hotel": {
-        "hotelname": ""
-      },
-      "location": {
-        "locationname": "rajshahi"
       }
     }
   ]

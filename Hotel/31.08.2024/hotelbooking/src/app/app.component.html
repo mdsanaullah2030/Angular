@@ -24,30 +24,36 @@
             </a>
 
           </li>
-          
+          <li class="nav-item">
+            <a class="nav-link" href="/creat">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Booking
+            </a>
 
-       
-          <li class="nav-item" *ngIf="userRole==='User'">
+          </li>
+
+
+
+          <li class="nav-item active" *ngIf="userRole==='User'">
             <a class="nav-link" href="/view">
               <i class="fa fa-map-marker" aria-hidden="true"></i> Location
             </a>
 
-
             <a class="nav-link" href="/hotelview">
               <i class="fa fa-building" aria-hidden="true"></i> Hotel
             </a>
-
+      
 
             <a class="nav-link" href="/roomview">
               <i class="fa fa-bed" aria-hidden="true"></i> Room
             </a>
+         
 
-
-
+        
             <a class="nav-link" href="booking">
               <i class="fa fa-calendar-check-o" aria-hidden="true"></i> Booking
             </a>
           </li>
+
 
 
           <li class="nav-item">
@@ -65,7 +71,7 @@
               <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
             </a>
           </li>
-         </ul>
+        </ul>
       </div>
     </nav>
   </div>

@@ -63,12 +63,22 @@
         "id": "f1d6",
         "locationname": "kuyakata"
       }
+    },
+    {
+      "id": "af89",
+      "hotelname": "sadadasd",
+      "address": "sdafsfsafdsfg",
+      "rating": "*****",
+      "location": {
+        "id": "00f0",
+        "locationname": "Chapinewbgong"
+      }
     }
   ],
   "room": [
     {
       "id": "room1",
-      "roomType": "Deluxe Suite",
+      "roomtype": "Deluxe Suite",
       "adults": 2,
       "children": 2,
       "price": 200,
@@ -78,11 +88,33 @@
       }
     },
     {
-      "id": "e9e1",
-      "roomType": "Double Room",
+      "id": "257e",
+      "roomtype": "Triple Room",
       "adults": 5,
       "children": 6,
-      "price": 7000,
+      "price": 9000,
+      "hotel": {
+        "id": "e3a0",
+        "hotelname": "dsdfsa"
+      }
+    },
+    {
+      "id": "3296",
+      "roomtype": "Superior Room",
+      "adults": 5,
+      "children": 4,
+      "price": 15000,
+      "hotel": {
+        "id": "e3a0",
+        "hotelname": "dsdfsa"
+      }
+    },
+    {
+      "id": "2024",
+      "roomtype": "Presidential Suite",
+      "adults": 5,
+      "children": 8,
+      "price": 30000,
       "hotel": {
         "id": "53fa",
         "hotelname": "M-Hotel"
@@ -91,123 +123,18 @@
   ],
   "booking": [
     {
-      "id": "1",
-      "username": "sdsfsa",
-      "checkindate": "8.21.2024",
-      "checkoutdate": "8.23.2024",
-      "totalprice": "5555",
-      "room": {
-        "id": "1",
-        "roomType": "Double Room",
-        "hotel": {
-          "id": "1",
-          "hotelname": "M-Hotel",
-          "location": {
-            "id": "1",
-            "locationname": "rajshahi"
-          }
-        }
-      }
-    },
-    {
-      "id": "d1e1",
-      "username": "erwe4r",
-      "checkindate": "2024-08-09",
-      "checkoutdate": "2024-08-30",
-      "totalprice": 54654,
-      "room": {
-        "id": "",
-        "roomtype": ""
-      },
-      "hotel": {
-        "id": "",
-        "hotelname": ""
-      },
-      "location": {
-        "id": "",
-        "locationname": ""
-      }
-    },
-    {
-      "id": "45f1",
-      "username": "asdasd",
-      "checkindate": "2024-08-15",
-      "checkoutdate": "2024-08-27",
-      "totalprice": 2342,
-      "room": {
-        "roomType": "Double Room"
-      },
-      "hotel": {
-        "hotelname": "Shabab ahmed Skip"
-      },
-      "location": {
-        "locationname": "Dhaka"
-      }
-    },
-    {
-      "id": "cf05",
-      "username": "fdgfd",
-      "checkindate": "2024-08-21",
-      "checkoutdate": "2024-08-21",
-      "totalprice": 34534,
-      "room": {
-        "roomType": "Deluxe Suite"
-      },
-      "hotel": {
-        "hotelname": "M-Hotel"
-      },
-      "location": {
-        "locationname": "Dhaka"
-      }
-    },
-    {
-      "id": "d0a7",
-      "username": "",
-      "checkindate": "2024-08-20",
-      "checkoutdate": "2024-08-11",
-      "totalprice": 43534,
-      "room": {
-        "roomType": "Double Room"
-      },
-      "hotel": {
-        "hotelname": "M-Hotel"
-      },
-      "location": {
-        "locationname": "Dhaka"
-      }
-    },
-    {
-      "id": "c852",
+      "id": "0dfd",
       "username": "sdfa",
-      "checkindate": "2024-08-25",
-      "checkoutdate": "2024-08-31",
-      "totalprice": 234,
+      "checkindate": "2024-08-16",
+      "checkoutdate": "2024-08-30",
+      "totalprice": 280000,
       "room": {
-        "roomType": "Deluxe Suite"
+        "roomtype": "Presidential Suite"
       },
       "hotel": {
         "hotelname": "M-Hotel"
       },
       "location": {
-        "locationname": "rajshahi"
-      }
-    },
-    {
-      "id": "7824",
-      "username": "sdfs",
-      "checkindate": "2024-08-30",
-      "checkoutdate": "2024-08-09",
-      "totalprice": 435,
-      "room": {
-        "id": "room1",
-        "roomType": "Deluxe Suite"
-      },
-      "hotel": {
-        "id": "b4fb",
-        "hotelname": "Shabab ahmed Skip"
-      },
-      "location": {
-        "id": "1",
         "locationname": "Dhaka"
       }
     }

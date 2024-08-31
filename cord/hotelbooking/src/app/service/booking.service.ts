@@ -8,15 +8,26 @@ import { BookingModel } from '../model/booking.model';
 })
 export class BookingService {
   baseUrl: string = "http://localhost:3000/booking";
-  constructor(private http: HttpClient) { }
 
+  constructor(private http: HttpClient) {}
 
   viewAllBooking(): Observable<any> {
     return this.http.get(this.baseUrl);
-
   }
   
   createBooking(booking: BookingModel): Observable<BookingModel> {
     return this.http.post<BookingModel>(`${this.baseUrl}`, booking);
+  }
+
+  deleteBooking(booking: string): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${booking}`);
+  }
+
+  updateBooking(booking: BookingModel): Observable<BookingModel> {
+    return this.http.put<BookingModel>(`${this.baseUrl}/${booking.id}`, booking);
+  }
+
+  getByBookingId(bookingId: string): Observable<BookingModel> {
+    return this.http.get<BookingModel>(`${this.baseUrl}/${bookingId}`);
   }
 }

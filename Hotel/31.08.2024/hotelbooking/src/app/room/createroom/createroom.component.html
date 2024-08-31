@@ -1,0 +1,71 @@
+<div class="container">
+  <h1 class="text-center">
+    <fa-icon [icon]="['fas', 'plus']"></fa-icon> Create Room
+  </h1>
+  <form [formGroup]="roomForm" (ngSubmit)="createRoom()">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="roomtype" class="form-label">
+          <fa-icon [icon]="['fas', 'door-open']"></fa-icon> Room Type
+        </label>
+        <select class="form-select" id="roomtype" formControlName="roomtype" required>
+          <option *ngFor="let option of roomtyp" [value]="option.value">
+            {{ option.label }}
+          </option>
+        </select>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label for="adults" class="form-label">
+          <fa-icon [icon]="['fas', 'user']"></fa-icon> Adults
+        </label>
+        <input id="adults" type="number" class="form-control" formControlName="adults" placeholder="Enter number of adults">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="children" class="form-label">
+          <fa-icon [icon]="['fas', 'child']"></fa-icon> Children
+        </label>
+        <input id="children" type="number" class="form-control" formControlName="children" placeholder="Enter number of children">
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label for="price" class="form-label">
+          <fa-icon [icon]="['fas', 'dollar-sign']"></fa-icon> Price
+        </label>
+        <input type="number" class="form-control" id="price" formControlName="price" placeholder="Enter Price" required>
+      </div>
+    </div>
+
+    <div class="mb-3" formGroupName="hotel">
+      <label for="hotel" class="form-label">
+        <fa-icon [icon]="['fas', 'hotel']"></fa-icon> Hotel Name
+      </label>
+      <select id="hotel" formControlName="hotelname" class="form-select" required>
+        <option value="" disabled selected>Select your hotel</option>
+        <option *ngFor="let loc of hotels" [ngValue]="loc.hotelname">{{ loc.hotelname }}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      <fa-icon [icon]="['fas', 'save']"></fa-icon> Submit
+    </button>
+
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <th>Room Type</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let room of roomtyp">
+          <td>{{ room.label }}</td>
+          <td>{{ room.price | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>

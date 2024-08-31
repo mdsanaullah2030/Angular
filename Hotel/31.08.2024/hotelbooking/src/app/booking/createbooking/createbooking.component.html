@@ -1,0 +1,59 @@
+<div class="container">
+  <h1 class="text-center">Create Booking</h1>
+  <form [formGroup]="BookingForm" (ngSubmit)="createBooking()">
+
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input id="username" type="text" class="form-control" formControlName="username" placeholder="Enter username">
+    </div>
+
+    <div class="mb-3" formGroupName="location">
+      <label for="location" class="form-label">Location Name:</label>
+      <select id="location" formControlName="locationname" class="form-select" required>
+        <option value="" disabled selected>Select your location</option>
+        <option *ngFor="let loc of locations" [ngValue]="loc.locationname">{{ loc.locationname }}</option>
+      </select>
+    </div>
+
+    <div class="mb-3" formGroupName="hotel">
+      <label for="hotel" class="form-label">Hotel Name:</label>
+      <select id="hotel" formControlName="hotelname" class="form-select" required>
+        <option value="" disabled selected>Select your hotel</option>
+        <option *ngFor="let hotel of hotels" [ngValue]="hotel.hotelname">{{ hotel.hotelname }}</option>
+      </select>
+    </div>
+
+    <div class="mb-3" formGroupName="room">
+      <label for="room" class="form-label">Room Type:</label>
+      <select id="room" formControlName="roomtype" class="form-select" required>
+        <option value="" disabled selected>Select your room type</option>
+        <option *ngFor="let room of roomtyp" [ngValue]="room.value">{{ room.label }}</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="checkindate" class="form-label">Check-in Date</label>
+      <input id="checkindate" type="date" class="form-control" formControlName="checkindate">
+    </div>
+
+    <div class="mb-3">
+      <label for="checkoutdate" class="form-label">Check-out Date</label>
+      <input id="checkoutdate" type="date" class="form-control" formControlName="checkoutdate">
+    </div>
+
+    <div class="mb-3">
+      <label for="totalprice" class="form-label">Total Price</label>
+      <input id="totalprice" type="number" class="form-control" readonly formControlName="totalprice">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
+    <div *ngIf="bookingSuccess" class="alert alert-success mt-3" role="alert">
+        <div class="card-body">
+        <h5 class="card-title">   <i class="fas fa-check-circle"></i> Booking completed successfully!</h5>
+        
+      
+      </div>
+    </div>
+  </form>
+</div>

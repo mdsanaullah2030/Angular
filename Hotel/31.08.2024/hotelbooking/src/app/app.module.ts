@@ -28,6 +28,7 @@ import { RegistrationComponent } from './singIn/registration/registration.compon
 import { UserprofileComponent } from './user/userprofile/userprofile.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import { UserprofileComponent } from './user/userprofile/userprofile.component';
     LoginComponent,
     LogoutComponent,
     RegistrationComponent,
-    UserprofileComponent
+    UserprofileComponent,
+   
   ],
   imports: [
     BrowserModule,

@@ -20,14 +20,20 @@ export class RegistrationComponent {
 
   ) {
     this.regForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      name:['', Validators.required],
+      email:['', [Validators.required, Validators.email]],
+      password:['',Validators.required]
 
+      // name:['', Validators.required],
+      // email:['', [Validators.required, Validators.email]],
+      // password:['',[Validators.required, Validators.min(6), Validators.max(20)]]
 
     })
 
   }
+
+
+
   onSubmit(): void {
     if (this.regForm.valid) {
       const user: UserModel = this.regForm.value;
@@ -35,14 +41,14 @@ export class RegistrationComponent {
         next: (res) => {
           console.log('User registered successfully:', res);
           this.authService.storeToken(res.token);
-          this.router.navigate(['/']);
+          this.router.navigate(['/']); // Navigate to a protected route after registration
         },
         error: (err) => {
           console.error('Error registering user:', err);
         }
       });
     }
-    else {
+    else{
       alert("Complte mandatory Field");
     }
   }

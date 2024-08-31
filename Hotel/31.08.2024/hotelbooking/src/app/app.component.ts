@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './service/auth.service';
+import { UserModel } from './model/user.model';
 
 @Component({
   selector: 'app-root',
@@ -8,16 +9,20 @@ import { AuthService } from './service/auth.service';
 })
 export class AppComponent  implements OnInit{
 
-  role:string | null='';
- 
-  title = 'hotelbooking';
-
-  constructor(
-    private auth:AuthService
-  ){
+  
+  userRole: string | null = '';
+  currentUser: UserModel| null = null;
+  
+  constructor(private authService:AuthService){
 
   }
+
+
   ngOnInit(): void {
-    this.role=this.auth.getRole();
+    this.authService.currentUser$.subscribe(user => {
+      this.currentUser = user;
+      this.userRole = user?.role || null;
+    });
   }
+
 } 

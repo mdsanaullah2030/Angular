@@ -8,21 +8,23 @@ import { map, Observable } from 'rxjs';
 })
 export class RoleGuard implements CanActivate {
 
-  constructor(
-    private authService: AuthService, 
-    private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    const expectedRole = route.data['role']  ;
-    const userRole=this.authService.getRole;
-
-        if (userRole && userRole===expectedRole) {
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
+    const expectedRole = route.data['role'] as Array<string> ;
+    const roles=this.authService.getUserRole();
+    return this.authService.currentUser$.pipe(
+      map(user => {
+        if (user && expectedRole.includes(roles)) {
           return true;
         } else {
           this.router.navigate(['/login']);
           return false;
         }
-      
-  
+      })
+    );
   }
+
+
 }
+

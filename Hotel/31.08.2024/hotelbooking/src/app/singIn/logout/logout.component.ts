@@ -24,7 +24,4 @@ export class LogoutComponent {
     this.router.navigate(['login']);
 
   }
-
-
-
 }
